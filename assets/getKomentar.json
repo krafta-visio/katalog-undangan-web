@@ -1,0 +1,42 @@
+[
+  {
+    "id_komentar_undangan": "123",
+    "tgl_komentar_undangan": "2022-03-14 11:46:35",
+    "isi_komentar_undangan": "Selamat yaah..",
+    "nama_komentar_undangan": "orang ampana",
+    "gambar": "assets/komentar-profile.png",
+    "sub_id_komentar": null
+  },
+  {
+    "id_komentar_undangan": "122",
+    "tgl_komentar_undangan": "2022-03-13 21:23:55",
+    "isi_komentar_undangan": "Mantapppp",
+    "nama_komentar_undangan": "Hilda Ampana",
+    "gambar": "assets/komentar-profile.png",
+    "sub_id_komentar": null
+  },
+  {
+    "id_komentar_undangan": "121",
+    "tgl_komentar_undangan": "2022-03-13 21:03:56",
+    "isi_komentar_undangan": "Selamat..",
+    "nama_komentar_undangan": "Essy Ampana",
+    "gambar": "assets/komentar-profile.png",
+    "sub_id_komentar": null
+  },
+  {
+    "id_komentar_undangan": "120",
+    "tgl_komentar_undangan": "2022-03-13 17:32:52",
+    "isi_komentar_undangan": "Samawa",
+    "nama_komentar_undangan": "Syukran Ampana",
+    "gambar": "assets/komentar-profile.png",
+    "sub_id_komentar": null
+  },
+  {
+    "id_komentar_undangan": "119",
+    "tgl_komentar_undangan": "2022-03-13 17:06:43",
+    "isi_komentar_undangan": "💐😘😘lancar sampai hari H ya,, samawa ",
+    "nama_komentar_undangan": "Ampana Lea",
+    "gambar": "assets/komentar-profile.png",
+    "sub_id_komentar": null
+  }
+]
