@@ -1,0 +1,839 @@
+{
+  "themes": [
+    {
+      "id": 1,
+      "name": "aqiqah-givemeart-mks-01",
+      "displayName": "Aqiqah-givemeart-mks-01",
+      "image": "f55b830080060e8b3511940b86a8abeb.png",
+      "category": "aqiqah",
+      "type": "scroll",
+      "description": "Tema aqiqah dengan desain modern dan elegan"
+    },
+    {
+      "id": 2,
+      "name": "aqiqah-givemeart-mks-02",
+      "displayName": "Aqiqah-givemeart-mks-02",
+      "image": "f8a29bac22ef77a4c939fc51ecec06c2.png",
+      "category": "aqiqah",
+      "type": "scroll",
+      "description": "Tema aqiqah dengan sentuhan artistik"
+    },
+    {
+      "id": 3,
+      "name": "aqiqah-givemeart-mks-03",
+      "displayName": "Aqiqah-givemeart-mks-03",
+      "image": "8c9fb6d2e5929271a701edefe9e060eb.png",
+      "category": "aqiqah",
+      "type": "scroll",
+      "description": "Tema aqiqah minimalis dan menarik"
+    },
+    {
+      "id": 4,
+      "name": "autoplay-floral-dance-01",
+      "displayName": "Autoplay-Floral-Dance-01",
+      "image": "14f67405b80801da4cc1d336d639ee31.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema dengan animasi bunga yang menari"
+    },
+    {
+      "id": 5,
+      "name": "autoplay-floral-dance-02",
+      "displayName": "Autoplay-Floral-Dance-02",
+      "image": "f0772a7db965f4ef3dd4d4753904c52d.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan gerakan yang elegan"
+    },
+    {
+      "id": 6,
+      "name": "autoplay-floral-dance-03",
+      "displayName": "Autoplay-Floral-Dance-03",
+      "image": "bf56c75b9acd998a88b686e585372a33.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan desain yang memukau"
+    },
+    {
+      "id": 7,
+      "name": "autoplay-floral-dance-04",
+      "displayName": "Autoplay-Floral-Dance-04",
+      "image": "686eaf15a09afc54e6cb8552b1d3568e.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan efek visual yang menarik"
+    },
+    {
+      "id": 8,
+      "name": "autoplay-floral-dance-05",
+      "displayName": "Autoplay-Floral-Dance-05",
+      "image": "fead4df8ec8bf62de2e5371dab514b26.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan warna yang cerah"
+    },
+    {
+      "id": 9,
+      "name": "autoplay-floral-dance-06",
+      "displayName": "Autoplay-Floral-Dance-06",
+      "image": "b1123eba550cc5e4f24c7cb2999c0f99.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan nuansa romantis"
+    },
+    {
+      "id": 10,
+      "name": "autoplay-floral-dance-07",
+      "displayName": "Autoplay-Floral-Dance-07",
+      "image": "445c8a37f6786879eb3573d37b3a9f9e.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan detail yang halus"
+    },
+    {
+      "id": 11,
+      "name": "autoplay-floral-dance-08",
+      "displayName": "Autoplay-Floral-Dance-08",
+      "image": "22720d9797780e1ab9999fdb6754ab42.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan pola yang unik"
+    },
+    {
+      "id": 12,
+      "name": "autoplay-floral-dance-09",
+      "displayName": "Autoplay-Floral-Dance-09",
+      "image": "3aa400cf211c5f47ecec991787be18ef.png",
+      "category": "floral",
+      "type": "autoplay",
+      "description": "Tema bunga dengan sentuhan modern"
+    },
+    {
+      "id": 13,
+      "name": "boxed-01-mv",
+      "displayName": "Boxed-01-MV",
+      "image": "95ea65ab0629999ff84a7323e93e02a3.jpg",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema dengan layout boxed yang rapi"
+    },
+    {
+      "id": 14,
+      "name": "boxed-02-mv",
+      "displayName": "Boxed-02-MV",
+      "image": "2ecf083551f0cb92de92b3a1b0a86cff.jpg",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema boxed dengan desain yang elegan"
+    },
+    {
+      "id": 15,
+      "name": "boxed-06-mv",
+      "displayName": "Boxed-06-MV",
+      "image": "151c81e74dc493e752db4017db0859c7.jpg",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema boxed minimalis dan modern"
+    },
+    {
+      "id": 16,
+      "name": "butterfly-fx-01",
+      "displayName": "Butterfly-FX-01",
+      "image": "3cc6554f22a9797ce40f116bdca8071a.png",
+      "category": "butterfly",
+      "type": "effect",
+      "description": "Tema dengan efek kupu-kupu yang cantik"
+    },
+    {
+      "id": 17,
+      "name": "butterfly-fx-02",
+      "displayName": "Butterfly-FX-02",
+      "image": "cd51191e7b7a937b2330477d15391f57.png",
+      "category": "butterfly",
+      "type": "effect",
+      "description": "Tema dengan animasi kupu-kupu yang menawan"
+    },
+    {
+      "id": 18,
+      "name": "butterfly-fx-03",
+      "displayName": "Butterfly-FX-03",
+      "image": "38d42605b0fd2cc07a34494ea2e30b6f.png",
+      "category": "butterfly",
+      "type": "effect",
+      "description": "Tema dengan kupu-kupu berwarna-warni"
+    },
+    {
+      "id": 19,
+      "name": "card-01-mv",
+      "displayName": "Card-01-MV",
+      "image": "f10eb4be1f957332f32b0d7fde7e03de.jpg",
+      "category": "card",
+      "type": "scroll",
+      "description": "Tema dengan layout seperti kartu undangan"
+    },
+    {
+      "id": 20,
+      "name": "card-02-mv",
+      "displayName": "Card-02-MV",
+      "image": "c2a3b95a6700102a26e9b867c7400219.jpg",
+      "category": "card",
+      "type": "scroll",
+      "description": "Tema kartu dengan desain yang menarik"
+    },
+    {
+      "id": 21,
+      "name": "card-03-mv",
+      "displayName": "Card-03-MV",
+      "image": "9579a17c071d6f2a1e3dbbad81cec702.jpg",
+      "category": "card",
+      "type": "scroll",
+      "description": "Tema kartu minimalis dan elegan"
+    },
+    {
+      "id": 22,
+      "name": "card-04-mv-full-dark",
+      "displayName": "Card-04-MV-Full-Dark",
+      "image": "af1423ed331521da6b14455d4af21327.jpg",
+      "category": "card",
+      "type": "dark",
+      "description": "Tema kartu dengan warna dark yang elegan"
+    },
+    {
+      "id": 23,
+      "name": "card-05-mv-full-dark",
+      "displayName": "Card-05-MV-Full-Dark",
+      "image": "5d2cdd229cb39d0621f8e440f4b75f27.jpg",
+      "category": "card",
+      "type": "dark",
+      "description": "Tema dark dengan sentuhan modern"
+    },
+    {
+      "id": 24,
+      "name": "card-06-mv-full-dark",
+      "displayName": "Card-06-MV-Full-Dark",
+      "image": "6cd6f6ae4b113af247166f7a379f5e29.jpg",
+      "category": "card",
+      "type": "dark",
+      "description": "Tema dark dengan layout yang rapi"
+    },
+    {
+      "id": 25,
+      "name": "ethnic-sm-01",
+      "displayName": "Ethnic-SM-01",
+      "image": "c2af65c35ded3feecc316f3cb6918444.png",
+      "category": "ethnic",
+      "type": "scroll",
+      "description": "Tema dengan nuansa etnik yang khas"
+    },
+    {
+      "id": 26,
+      "name": "ethnic-sm-02",
+      "displayName": "Ethnic-SM-02",
+      "image": "0aac18f48f0f63cb1bf2148a3da967c4.png",
+      "category": "ethnic",
+      "type": "scroll",
+      "description": "Tema etnik dengan desain yang unik"
+    },
+    {
+      "id": 27,
+      "name": "ethnic-sm-03",
+      "displayName": "Ethnic-SM-03",
+      "image": "e75e511651429847db2b442ff5f94c38.png",
+      "category": "ethnic",
+      "type": "scroll",
+      "description": "Tema etnik modern dan menarik"
+    },
+    {
+      "id": 28,
+      "name": "full-pattern-01",
+      "displayName": "Full-Pattern-01",
+      "image": "5202d36fba0d985b62dd874fd78940ca.png",
+      "category": "pattern",
+      "type": "scroll",
+      "description": "Tema dengan pola penuh yang menarik"
+    },
+    {
+      "id": 29,
+      "name": "full-pattern-02",
+      "displayName": "Full-Pattern-02",
+      "image": "3b0585e757f91978e0c0d29618d29ab6.png",
+      "category": "pattern",
+      "type": "scroll",
+      "description": "Tema dengan pola yang detail"
+    },
+    {
+      "id": 30,
+      "name": "full-pattern-03",
+      "displayName": "Full-Pattern-03",
+      "image": "f7cec254b4988c00fdce570efe0168c2.png",
+      "category": "pattern",
+      "type": "scroll",
+      "description": "Tema pola dengan warna yang harmonis"
+    },
+    {
+      "id": 31,
+      "name": "full-pattern-sfe-04",
+      "displayName": "Full-Pattern-SFE-04",
+      "image": "428975d3c1864ffcb53dc258d0b12446.png",
+      "category": "pattern",
+      "type": "effect",
+      "description": "Tema pola dengan efek khusus"
+    },
+    {
+      "id": 32,
+      "name": "full-pattern-sfe-05",
+      "displayName": "Full-Pattern-SFE-05",
+      "image": "b28fde2cb61dc9a31da5cae1fc189409.png",
+      "category": "pattern",
+      "type": "effect",
+      "description": "Tema pola dengan animasi yang halus"
+    },
+    {
+      "id": 33,
+      "name": "full-pattern-sfe-06",
+      "displayName": "Full-Pattern-SFE-06",
+      "image": "eb3694d716595389f6ad38af39bfa592.png",
+      "category": "pattern",
+      "type": "effect",
+      "description": "Tema pola dengan transisi yang mulus"
+    },
+    {
+      "id": 34,
+      "name": "jawa-01",
+      "displayName": "Jawa-01",
+      "image": "2ca80d2d827af12610a472ec8e3b251f.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan nuansa budaya Jawa"
+    },
+    {
+      "id": 35,
+      "name": "love-cartoon-01",
+      "displayName": "LOVE-CARTOON-01",
+      "image": "f30102a2c2cb8ead22e03d2ec084d8fb.png",
+      "category": "love",
+      "type": "cartoon",
+      "description": "Tema cinta dengan karakter kartun lucu"
+    },
+    {
+      "id": 36,
+      "name": "love-cartoon-02",
+      "displayName": "LOVE-CARTOON-02",
+      "image": "4e94632a8e2bf8d720b167a958ea37ad.png",
+      "category": "love",
+      "type": "cartoon",
+      "description": "Tema cinta dengan ilustrasi yang manis"
+    },
+    {
+      "id": 37,
+      "name": "love-cartoon-03",
+      "displayName": "LOVE-CARTOON-03",
+      "image": "2cd344718594066a8aaafd28138d2913.png",
+      "category": "love",
+      "type": "cartoon",
+      "description": "Tema cinta dengan warna pastel yang lembut"
+    },
+    {
+      "id": 38,
+      "name": "minang-01",
+      "displayName": "Minang-01",
+      "image": "a41de7040c1a8a802369825fe8df811e.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan budaya Minangkabau"
+    },
+    {
+      "id": 39,
+      "name": "mss-01",
+      "displayName": "MSS-01",
+      "image": "36722e386a59b8faf3f7bd6ae2c85122.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema minimalis sederhana dan elegan"
+    },
+    {
+      "id": 40,
+      "name": "mss-02",
+      "displayName": "MSS-02",
+      "image": "4bbb3cfaa6be7d221643e4bdfe6237c8.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema simpel dengan desain yang rapi"
+    },
+    {
+      "id": 41,
+      "name": "mss-03",
+      "displayName": "MSS-03",
+      "image": "f90b519351b9e054ae12f3f02e455891.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema minimalis dengan nuansa modern"
+    },
+    {
+      "id": 42,
+      "name": "mss-04",
+      "displayName": "MSS-04",
+      "image": "47f0fdcebd51ff9e027aa9152a9bc466.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema sederhana dengan layout yang bersih"
+    },
+    {
+      "id": 43,
+      "name": "mss-05",
+      "displayName": "MSS-05",
+      "image": "da209c575be8c178519a84f63a9be1bd.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema minimalis dengan sentuhan elegan"
+    },
+    {
+      "id": 44,
+      "name": "mss-06",
+      "displayName": "MSS-06",
+      "image": "5b022f574878d1c3a94d6f5c0c8e93db.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema simpel dengan warna yang lembut"
+    },
+    {
+      "id": 45,
+      "name": "nursa-01",
+      "displayName": "NURSA-01",
+      "image": "43f5eb1061bc67dabe84b2d385e87d77.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan desain minimalis"
+    },
+    {
+      "id": 46,
+      "name": "nursa-02",
+      "displayName": "NURSA-02",
+      "image": "dd5786515efa179c01fd5c9ff8afd963.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan layout yang menarik"
+    },
+    {
+      "id": 47,
+      "name": "nursa-03",
+      "displayName": "NURSA-03",
+      "image": "8c5fcfa5a4928bdf855b19751b5b0ba3.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan nuansa modern"
+    },
+    {
+      "id": 48,
+      "name": "nursa-04",
+      "displayName": "NURSA-04",
+      "image": "4358f4742aef6fb020304b032ec33334.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan desain yang elegan"
+    },
+    {
+      "id": 49,
+      "name": "nursa-05",
+      "displayName": "NURSA-05",
+      "image": "8d1c0f403b85107b893c5bd5cc072532.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan sentuhan artistik"
+    },
+    {
+      "id": 50,
+      "name": "nursa-06",
+      "displayName": "NURSA-06",
+      "image": "0b0e389a4c52e4cb9ef7a58ec3937c53.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Nursa dengan warna yang cerah"
+    },
+    {
+      "id": 51,
+      "name": "psh-01",
+      "displayName": "PSH-01",
+      "image": "c109d7b40818b7ec68f653a2dcdeb3e7.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan desain yang bersih"
+    },
+    {
+      "id": 52,
+      "name": "psh-02",
+      "displayName": "PSH-02",
+      "image": "84b8915fd4bd40817bc58a0a23444027.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan layout yang rapi"
+    },
+    {
+      "id": 53,
+      "name": "psh-03",
+      "displayName": "PSH-03",
+      "image": "c2c8a3f7229bb8a206c26288f295cfd4.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan nuansa minimalis"
+    },
+    {
+      "id": 54,
+      "name": "psh-04",
+      "displayName": "PSH-04",
+      "image": "bfba1af4ddfa1952df6798da9430864d.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan desain yang elegan"
+    },
+    {
+      "id": 55,
+      "name": "psh-05",
+      "displayName": "PSH-05",
+      "image": "62388adf6db8d7ba6c88a6cc9c0d7bd3.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan sentuhan modern"
+    },
+    {
+      "id": 56,
+      "name": "psh-06",
+      "displayName": "PSH-06",
+      "image": "deedcb244ada785325a6e9d93830ef90.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema PSH dengan warna yang lembut"
+    },
+    {
+      "id": 57,
+      "name": "simple-corner-01",
+      "displayName": "Simple-Corner-01",
+      "image": "c3b6e4d29949798803bf7cafa0ecac6e.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema dengan desain corner yang sederhana"
+    },
+    {
+      "id": 58,
+      "name": "simple-corner-02",
+      "displayName": "Simple-Corner-02",
+      "image": "db43041c5a7ae1da3e304abea3c468d5.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema corner dengan layout yang menarik"
+    },
+    {
+      "id": 59,
+      "name": "simple-corner-03",
+      "displayName": "Simple-Corner-03",
+      "image": "d447c69cd1016eca56c83ab83b473953.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema corner dengan nuansa minimalis"
+    },
+    {
+      "id": 60,
+      "name": "simple-corner-04",
+      "displayName": "Simple-Corner-04",
+      "image": "8cb0db729ee601e33aae082643393562.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema corner dengan desain yang elegan"
+    },
+    {
+      "id": 61,
+      "name": "simple-corner-05",
+      "displayName": "Simple-Corner-05",
+      "image": "ecea807aa36f04bdeb0796d9a9744d37.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema corner dengan sentuhan modern"
+    },
+    {
+      "id": 62,
+      "name": "simple-corner-06",
+      "displayName": "Simple-Corner-06",
+      "image": "7c064a9dafa50ee1fedc76a0bdcc0384.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema corner dengan warna yang cerah"
+    },
+    {
+      "id": 63,
+      "name": "sm-07",
+      "displayName": "SM-07",
+      "image": "6f633cd6cc24c63bde50a7658e5a2fe4.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Simple Modern 07"
+    },
+    {
+      "id": 64,
+      "name": "sm-08",
+      "displayName": "SM-08",
+      "image": "8fae5387be6dbb105ba52d9f211e5df7.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Simple Modern 08"
+    },
+    {
+      "id": 65,
+      "name": "sm-09",
+      "displayName": "SM-09",
+      "image": "a4cd361b60c836089761c8cb60434fab.jpg",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema Simple Modern 09"
+    },
+    {
+      "id": 66,
+      "name": "snowflakes-effect-10",
+      "displayName": "Snowflakes-Effect-10",
+      "image": "fc1024f0ca7045b29c3be149f23ed2fe.png",
+      "category": "effect",
+      "type": "snow",
+      "description": "Tema dengan efek salju yang romantis"
+    },
+    {
+      "id": 67,
+      "name": "snowflakes-effect-11",
+      "displayName": "Snowflakes-Effect-11",
+      "image": "b84477fb093edf6ad699b5fb4c57e2e1.png",
+      "category": "effect",
+      "type": "snow",
+      "description": "Tema dengan animasi salju yang cantik"
+    },
+    {
+      "id": 68,
+      "name": "snowflakes-effect-12",
+      "displayName": "Snowflakes-Effect-12",
+      "image": "c30a4a6a90c61f46e25107690b0d7a71.png",
+      "category": "effect",
+      "type": "snow",
+      "description": "Tema dengan efek salju berkilau"
+    },
+    {
+      "id": 69,
+      "name": "sunda-01",
+      "displayName": "Sunda-01",
+      "image": "748382815a6ff3b68a94881ee2a84e77.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan budaya Sunda"
+    },
+    {
+      "id": 70,
+      "name": "swn-01",
+      "displayName": "SWN-01",
+      "image": "c89ced39b1d2e1dbed5efc7f843635cd.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan desain modern"
+    },
+    {
+      "id": 71,
+      "name": "swn-02",
+      "displayName": "SWN-02",
+      "image": "74f9e4b86354656d3444649a190a538d.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan layout yang menarik"
+    },
+    {
+      "id": 72,
+      "name": "swn-03",
+      "displayName": "SWN-03",
+      "image": "31709e12fc478ab74d70f353cb79eb7a.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan nuansa minimalis"
+    },
+    {
+      "id": 73,
+      "name": "swn-04",
+      "displayName": "SWN-04",
+      "image": "291792f57f3c76ab8f5d41a9e30f6bba.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan desain yang elegan"
+    },
+    {
+      "id": 74,
+      "name": "swn-05",
+      "displayName": "SWN-05",
+      "image": "57e162c77de991e25e8d8342b20500c7.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan sentuhan modern"
+    },
+    {
+      "id": 75,
+      "name": "swn-06",
+      "displayName": "SWN-06",
+      "image": "2f90c28c2b404bda57970c777fbb0cdf.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan warna yang lembut"
+    },
+    {
+      "id": 76,
+      "name": "swn-07",
+      "displayName": "SWN-07",
+      "image": "540816ec92ca05c9ae6e6e99233f8cbb.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan desain bersih"
+    },
+    {
+      "id": 77,
+      "name": "swn-08",
+      "displayName": "SWN-08",
+      "image": "938eb3767eb9455f6319298b59d285fd.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan layout rapi"
+    },
+    {
+      "id": 78,
+      "name": "swn-09",
+      "displayName": "SWN-09",
+      "image": "1fd14e5ef000f4d87bc917d8dfd8b4ef.png",
+      "category": "simple",
+      "type": "scroll",
+      "description": "Tema SWN dengan nuansa elegan"
+    },
+    {
+      "id": 79,
+      "name": "wavy-sfe-01",
+      "displayName": "Wavy-SFE-01",
+      "image": "131a4fc2044ad8c7cfe5acdb797808fa.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan efek gelombang yang halus"
+    },
+    {
+      "id": 80,
+      "name": "wavy-sfe-02",
+      "displayName": "Wavy-SFE-02",
+      "image": "fab1501f0e1010010c1ae8fe0ab9804d.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan animasi gelombang yang menarik"
+    },
+    {
+      "id": 81,
+      "name": "wavy-sfe-03",
+      "displayName": "Wavy-SFE-03",
+      "image": "535a0317b43fefe5992b17d888b49204.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan efek gelombang berwarna"
+    },
+    {
+      "id": 82,
+      "name": "wavy-sfe-04",
+      "displayName": "Wavy-SFE-04",
+      "image": "b3b8446ba1278e328597d2185da65c05.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan gelombang yang dinamis"
+    },
+    {
+      "id": 83,
+      "name": "wavy-sfe-05",
+      "displayName": "Wavy-SFE-05",
+      "image": "f785c52586cf7f1bd692bd4503820686.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan efek gelombang elegan"
+    },
+    {
+      "id": 84,
+      "name": "wavy-sfe-06",
+      "displayName": "Wavy-SFE-06",
+      "image": "dba856c3f27078d9606a96c7ab1af006.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan gelombang yang lembut"
+    },
+    {
+      "id": 85,
+      "name": "wavy-sfe-07",
+      "displayName": "Wavy-SFE-07",
+      "image": "345abd05e94bf355862ceea7a044dfcc.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan efek gelombang modern"
+    },
+    {
+      "id": 86,
+      "name": "wavy-sfe-08",
+      "displayName": "Wavy-SFE-08",
+      "image": "cdc1def1e004a527a96844acb52303b2.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan animasi gelombang halus"
+    },
+    {
+      "id": 87,
+      "name": "wavy-sfe-09",
+      "displayName": "Wavy-SFE-09",
+      "image": "1810b9eb4ccf8271a4f7296e41ea62af.png",
+      "category": "effect",
+      "type": "wavy",
+      "description": "Tema dengan efek gelombang akhir"
+    },
+    {
+      "id": 88,
+      "name": "wide-01",
+      "displayName": "Wide-01",
+      "image": "de66c337c2428732fb33846baa0410fd.jpg",
+      "category": "wide",
+      "type": "scroll",
+      "description": "Tema dengan layout wide yang luas"
+    },
+    {
+      "id": 89,
+      "name": "wide-02",
+      "displayName": "Wide-02",
+      "image": "b8f8da4ce552a082097c478f2c2936b1.jpg",
+      "category": "wide",
+      "type": "scroll",
+      "description": "Tema wide dengan desain yang menarik"
+    },
+    {
+      "id": 90,
+      "name": "wide-03",
+      "displayName": "Wide-03",
+      "image": "e87da42275ecad0df478812fc97232ae.jpg",
+      "category": "wide",
+      "type": "scroll",
+      "description": "Tema wide minimalis dan elegan"
+    }
+  ],
+  "total": 90,
+  "itemsPerPage": 9,
+  "categories": [
+    "aqiqah",
+    "floral",
+    "boxed",
+    "butterfly",
+    "card",
+    "ethnic",
+    "pattern",
+    "traditional",
+    "love",
+    "simple",
+    "effect",
+    "wide"
+  ],
+  "types": [
+    "scroll",
+    "autoplay",
+    "effect",
+    "dark",
+    "cartoon",
+    "snow",
+    "wavy"
+  ]
+}
