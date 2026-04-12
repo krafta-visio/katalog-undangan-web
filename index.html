@@ -10,478 +10,481 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>Digital Web Invitation - krafta.</title>
-    <meta name="description" content="Katalog tema undangan digital web">
-    <meta name="keywords" content="krafta, undangan web">
-    
+    <meta name="description" content="Katalog tema undangan digital web premium dari krafta.">
+    <meta name="keywords" content="krafta, undangan web, undangan digital, undangan pernikahan online">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://krafta-visio.github.io/katalog-undangan-web/">
     <meta property="og:title" content="Digital Web Invitation - krafta.">
-    <meta property="og:description" content="Katalog tema undangan digital web">
+    <meta property="og:description" content="Katalog tema undangan digital web premium dari krafta.">
     <meta property="og:image" content="https://krafta-visio.github.io/katalog-undangan-web/images/og-images-01.jpg">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Digital Web Invitation - krafta.">
-    <meta name="twitter:description" content="Katalog tema undangan digital web">
+    <meta name="twitter:description" content="Katalog tema undangan digital web premium dari krafta.">
     <meta name="twitter:image" content="https://krafta-visio.github.io/katalog-undangan-web/images/og-images-01.jpg">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
+    <!-- Tailwind CSS CDN v3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['"Google Sans"', 'sans-serif'],
+                        'serif': ['"Young Serif"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fdf4ff',
+                            100: '#fae8ff',
+                            200: '#f3d0ff',
+                            300: '#e9a8ff',
+                            400: '#d876fd',
+                            500: '#c044f1',
+                            600: '#a326d4',
+                            700: '#871cae',
+                            800: '#701a8d',
+                            900: '#5d1a74',
+                            950: '#3c0552',
+                        },
+                        accent: {
+                            400: '#fb923c',
+                            500: '#f97316',
+                        }
+                    },
+                    animation: {
+                        'shimmer': 'shimmer 1.8s infinite',
+                        'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-y': 'bounceY 1.5s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'fade-in': 'fadeIn 0.4s ease-out',
+                    },
+                    keyframes: {
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        bounceY: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(8px)' },
+                        },
+                        slideUp: {
+                            from: { opacity: '0', transform: 'translateX(-50%) translateY(20px)' },
+                            to: { opacity: '1', transform: 'translateX(-50%) translateY(0)' },
+                        },
+                        fadeIn: {
+                            from: { opacity: '0', transform: 'translateY(10px)' },
+                            to: { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	
-	<!-- Google Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Young+Serif&display=swap" rel="stylesheet">
-    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Young+Serif&display=swap"
+        rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body style="background:#eeeeee;">
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="btn btn-primary btn-lg rounded-circle shadow">
+<body class="bg-gray-100 font-sans antialiased">
+
+    <!-- ======== BACK TO TOP ======== -->
+    <button id="back-to-top" class="fixed bottom-5 right-5 z-50 hidden w-12 h-12 items-center justify-center rounded-full
+               bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-lg
+               hover:from-brand-400 hover:to-brand-600 hover:-translate-y-1
+               transition-all duration-300 focus:outline-none" aria-label="Kembali ke atas">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <div id="konten" class="container">
-        <!-- Header -->
-        <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="images/logo-krafta.png" alt="Logo krafta" height="120">
-            <h5>WEB INVITATION CATALOG</h5>
-            <h2>Undangan Digital untuk Setiap Momen Spesial</h2>
-            <p class="lead">Selamat datang, Kak! Terima kasih sudah mengunjungi katalog kami. <br>Langkahkan sedikit lagi, dan temukan undangan digital yang sempurna untuk mengiringi momen Kakak.</p>
+    <!-- ======== HERO / HEADER ======== -->
+    <header class="site-header relative overflow-hidden text-white">
+        <!-- Decorative glow blobs -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full blur-3xl pointer-events-none"
+             style="background: rgba(251,189,17,0.25);"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 rounded-full blur-3xl pointer-events-none"
+             style="background: rgba(251,189,17,0.18);"></div>
+
+        <div class="relative max-w-4xl mx-auto px-4 py-16 sm:py-20 text-center">
+            <img src="images/logo-krafta.png" alt="Logo krafta"
+                class="mx-auto mb-6 w-auto max-h-24 sm:max-h-28 object-contain drop-shadow-xl">
+
+            <p class="uppercase tracking-widest text-xs sm:text-sm font-semibold mb-2" style="color:#fbbd11;">
+                Web Invitation Catalog
+            </p>
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4" style="color:#fff8e7;">
+                Undangan Digital untuk<br class="hidden sm:block"> Setiap Momen Spesial
+            </h1>
+            <p class="max-w-xl mx-auto text-sm sm:text-base leading-relaxed" style="color:rgba(255,244,200,0.75);">
+                Selamat datang, Kak! Terima kasih sudah mengunjungi katalog kami.<br>
+                Temukan undangan digital yang sempurna untuk mengiringi momen Kakak.
+            </p>
+
+            <!-- CTA -->
+            <a href="https://api.whatsapp.com/send?phone=6281370705753&text=Halo%20kak%2C%20saya%20ingin%20konsultasi%20tentang%20undangan%20digital."
+                target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full
+                      font-semibold text-sm sm:text-base
+                      hover:-translate-y-0.5 transition-all duration-300 shadow-lg"
+                style="background:#fbbd11;color:#3c0552;">
+                <i class="fab fa-whatsapp text-lg"></i>
+                Hubungi Kami
+            </a>
         </div>
-        
-        <!-- Alert -->
-        <div class="alert alert-warning alert-dismissible fade show mb-5" role="alert">
-            <strong>MOHON DIBACA DAHULU</strong>
-            <ul>
-                <li>Semua tema mendukung untuk Tema non-pernikahan.</li>
-                <li>Semua tema dapat menggunakan Foto / Tanpa Foto / dengan Kartun (Harga sama tanpa tambahan biaya).</li>
-                <li>Dapat custom minor untuk tambah/hilangkan bagian tertentu dan/atau custom minor lainnya.</li>
-                <li>Tema undangan web tersedia dalam Tema Scroll ataupun Tema Slider.</li>
-            </ul>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+    </header>
 
-        <!-- Filter Section -->
-		<div class="row mb-4">
-			<div class="col-12">
-				<h5>Filter Tema:</h5>
-				<div class="d-flex flex-wrap gap-2">
-					<span class="badge bg-primary filter-badge active" data-filter="all">Semua</span>
-					<span class="badge bg-secondary filter-badge" data-filter="aqiqah">Aqiqah</span>
-					<span class="badge bg-secondary filter-badge" data-filter="floral">Floral</span>
-					<span class="badge bg-secondary filter-badge" data-filter="boxed">Boxed</span>
-					<span class="badge bg-secondary filter-badge" data-filter="butterfly">Butterfly</span>
-					<span class="badge bg-secondary filter-badge" data-filter="card">Card</span>
-					<span class="badge bg-secondary filter-badge" data-filter="ethnic">Ethnic</span>
-					<span class="badge bg-secondary filter-badge" data-filter="pattern">Pattern</span>
-					<span class="badge bg-secondary filter-badge" data-filter="traditional">Traditional</span>
-					<span class="badge bg-secondary filter-badge" data-filter="love">Love</span>
-					<span class="badge bg-secondary filter-badge" data-filter="simple">Simple</span>
-					<span class="badge bg-secondary filter-badge" data-filter="effect">Effect</span>
-					<span class="badge bg-secondary filter-badge" data-filter="wide">Wide</span>
-					<span class="badge bg-info filter-badge" data-filter="scroll">Scroll</span>
-					<span class="badge bg-info filter-badge" data-filter="autoplay">Autoplay</span>
-					<span class="badge bg-info filter-badge" data-filter="dark">Dark</span>
-					<span class="badge bg-info filter-badge" data-filter="cartoon">Cartoon</span>
-					<span class="badge bg-info filter-badge" data-filter="snow">Snow</span>
-					<span class="badge bg-info filter-badge" data-filter="wavy">Wavy</span>
-				</div>
-			</div>
-		</div>
+    <!-- ======== MAIN CONTENT ======== -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
 
-        <!-- Themes Container -->
-		<div class="row mb-5" id="tema-container">
-			<!-- Prompt untuk user scroll ke bawah -->
-			<div class="col-12 initial-load-prompt" id="initial-prompt">
-				<i class="fas fa-arrow-down fa-2x mb-3"></i>
-				<p>Scroll ke bawah untuk memuat tema...</p>
-				<small class="text-muted">Tema akan dimuat otomatis saat Anda scroll</small>
-			</div>
-		</div>
-
-        <div id="infinite-scroll-trigger" class="infinite-scroll-trigger"></div>
-
-        <!-- Loading Spinner 
-        <div id="loading-spinner" class="text-center mb-5">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
+        <!-- ===== INFO ALERT ===== -->
+        <div id="info-alert" class="relative mt-8 mb-8 p-4 sm:p-5 rounded-2xl
+             bg-amber-50 border border-amber-200 shadow-sm">
+            <button id="close-alert" onclick="document.getElementById('info-alert').style.display='none'"
+                class="absolute top-3 right-3 text-amber-400 hover:text-amber-600 transition-colors" aria-label="Tutup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="flex items-start gap-3">
+                <span
+                    class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
+                    <i class="fas fa-info-circle text-sm"></i>
+                </span>
+                <div>
+                    <p class="font-semibold text-amber-800 mb-1">Mohon dibaca dahulu!</p>
+                    <ul class="text-amber-700 text-sm space-y-1 list-disc list-inside">
+                        <li>Semua tema mendukung untuk Tema non-pernikahan.</li>
+                        <li>Semua tema dapat menggunakan Foto / Tanpa Foto / dengan Kartun (Harga sama tanpa tambahan
+                            biaya).</li>
+                        <li>Dapat custom minor untuk tambah/hilangkan bagian tertentu dan/atau custom minor lainnya.
+                        </li>
+                        <li>Tema undangan web tersedia dalam Tema Scroll ataupun Tema Slider.</li>
+                    </ul>
+                </div>
             </div>
-            <p class="mt-2">Memuat tema...</p>
         </div>
-		-->
 
-		<div class="row mb-5">
-			<div class="col-12 mb-5">
-				<p class="lead text-center">
-					Hal-hal yang sering ditanyakan <br>
-					<small>Frequently Asked Questions (FAQ)</small>
-				</p>
+        <!-- ===== FILTER SECTION ===== -->
+        <section class="mb-6">
+            <h2 class="font-serif text-xl font-semibold text-gray-700 mb-3">Filter Tema</h2>
+            <div class="flex flex-wrap gap-2" id="filter-container">
+                <span class="filter-badge active" data-filter="all">Semua</span>
+                <span class="filter-badge" data-filter="aqiqah">Aqiqah</span>
+                <span class="filter-badge" data-filter="floral">Floral</span>
+                <span class="filter-badge" data-filter="boxed">Boxed</span>
+                <span class="filter-badge" data-filter="butterfly">Butterfly</span>
+                <span class="filter-badge" data-filter="card">Card</span>
+                <span class="filter-badge" data-filter="ethnic">Ethnic</span>
+                <span class="filter-badge" data-filter="pattern">Pattern</span>
+                <span class="filter-badge" data-filter="traditional">Traditional</span>
+                <span class="filter-badge" data-filter="love">Love</span>
+                <span class="filter-badge" data-filter="simple">Simple</span>
+                <span class="filter-badge" data-filter="effect">Effect</span>
+                <span class="filter-badge" data-filter="wide">Wide</span>
+                <span class="filter-badge filter-badge--type" data-filter="scroll">Scroll</span>
+                <span class="filter-badge filter-badge--type" data-filter="autoplay">Autoplay</span>
+                <span class="filter-badge filter-badge--type" data-filter="dark">Dark</span>
+                <span class="filter-badge filter-badge--type" data-filter="cartoon">Cartoon</span>
+                <span class="filter-badge filter-badge--type" data-filter="snow">Snow</span>
+                <span class="filter-badge filter-badge--type" data-filter="wavy">Wavy</span>
+            </div>
+        </section>
 
-				<!-- ================== AWAL ACCORDION KOLOM KIRI ================== -->
-				<div class="accordion accordion-flush" id="afcLeft">
-					<!-- 1. Pembuatan undangan -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft1" aria-expanded="false" aria-controls="fcLeft1">
-								<b>Apakah pembuatan undangan dilakukan sendiri atau dibuatkan oleh tim?</b>
-							</button>
-						</span>
-						<div id="fcLeft1" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Pembuatan undangan dilakukan sepenuhnya oleh tim desainer kami. Anda tidak perlu repot, cukup menunggu hasil jadi. Jika ada revisi minor (perubahan teks, tata letak sederhana, dll), Anda bisa mengajukannya kepada tim desainer kami.</i>
-							</div>
-						</div>
-					</div>
+        <!-- ===== THEMES GRID ===== -->
+        <section>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10" id="tema-container">
+                <!-- Initial scroll prompt -->
+                <div class="col-span-full initial-load-prompt" id="initial-prompt">
+                    <i class="fas fa-arrow-down animate-bounce-y text-brand-400 text-3xl mb-3 block"></i>
+                    <p class="text-gray-500 font-medium">Scroll ke bawah untuk memuat tema...</p>
+                    <small class="text-gray-400">Tema akan dimuat otomatis saat Anda scroll</small>
+                </div>
+            </div>
 
-					<!-- 2. Waktu pengerjaan + Paket Express (gabung) -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft2" aria-expanded="false" aria-controls="fcLeft2">
-								<b>Berapa lama waktu pengerjaan? Apakah tersedia paket express?</b>
-							</button>
-						</span>
-						<div id="fcLeft2" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Estimasi pengerjaan reguler 1-2 hari (sesuai antrian). Kami juga menyediakan <b>paket express 1x24 jam</b> dengan tambahan biaya agar undangan Anda diprioritaskan.</i>
-							</div>
-						</div>
-					</div>
+            <div id="infinite-scroll-trigger" class="infinite-scroll-trigger"></div>
+        </section>
 
-					<!-- 3. Masa aktif undangan -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft3" aria-expanded="false" aria-controls="fcLeft3">
-								<b>Apakah masa aktif undangan website selamanya?</b>
-							</button>
-						</span>
-						<div id="fcLeft3" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Masa aktif undangan adalah selamanya selama website kami tetap beroperasi. InsyaAllah kami akan terus aktif melayani calon mempelai.</i>
-							</div>
-						</div>
-					</div>
+        <!-- ===== FAQ SECTION ===== -->
+        <section class="mt-4 mb-12">
+            <div class="text-center mb-8">
+                <p class="uppercase tracking-widest text-xs font-semibold mb-1" style="color:#fbbd11;">FAQ</p>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-800">Hal-hal yang Sering Ditanyakan</h2>
+                <p class="text-gray-500 text-sm mt-1">Frequently Asked Questions</p>
+            </div>
 
-					<!-- 4. Request lagu -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft4" aria-expanded="false" aria-controls="fcLeft4">
-								<b>Apakah bisa bebas request lagu sebagai backsound?</b>
-							</button>
-						</span>
-						<div id="fcLeft4" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Tentu, Anda bebas memilih lagu sesuai keinginan untuk backsound undangan digital Anda.</i>
-							</div>
-						</div>
-					</div>
+            <div class="max-w-3xl mx-auto space-y-3" id="faq-container">
 
-					<!-- 5. Persiapan data -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft5" aria-expanded="false" aria-controls="fcLeft5">
-								<b>Apa saja data yang perlu dipersiapkan untuk membuat undangan online?</b>
-							</button>
-						</span>
-						<div id="fcLeft5" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Setelah konfirmasi pembayaran, admin kami akan mengirimkan form kelengkapan data (nama mempelai, tanggal acara, lokasi, galeri foto, dll).</i>
-							</div>
-						</div>
-					</div>
+                <!-- FAQ Item -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-1" aria-expanded="false"
+                        aria-controls="faq-1">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah pembuatan undangan sendiri
+                            atau dibuatkan?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-1" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Untuk pembuatan undangan dilakukan sepenuhnya oleh tim desainer kami, jadinya kamu tidak perlu
+                        repot dan hanya menunggu hasilnya jadi. Setelah hasil sudah jadi, jika ingin ada revisi (revisi
+                        minor / custom minor) kamu dapat ajukan kepada tim desainer kami.
+                    </div>
+                </div>
 
-					<!-- 6. Custom desain dari rancangan sendiri -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft6" aria-expanded="false" aria-controls="fcLeft6">
-								<b>Saya sudah punya rancangan desain, apakah bisa diwujudkan jadi undangan website?</b>
-							</button>
-						</span>
-						<div id="fcLeft6" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Bisa sekali. Silakan konsultasikan dengan CS kami untuk layanan custom desain sesuai rancangan Anda.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-2" aria-expanded="false"
+                        aria-controls="faq-2">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Berapa lama waktu pengerjaan
+                            undangan digital website? Apakah menyediakan paket express?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-2" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Estimasi pengerjaan 1–2 hari, dapat lebih cepat dari itu. Akan dikerjakan sesuai antriannya.
+                    </div>
+                </div>
 
-				</div>
-				<!-- ================== AKHIR ACCORDION KOLOM KIRI ================== -->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-3" aria-expanded="false"
+                        aria-controls="faq-3">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah masa aktif undangan
+                            website selamanya?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-3" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Masa aktif undangan selamanya ya kak, selama website kami aktif. Dan Insya Allah kami akan terus
+                        aktif melayani calon-calon mempelai.
+                    </div>
+                </div>
 
-				<!-- ================== AWAL ACCORDION KOLOM KANAN ================== -->
-				<div class="accordion accordion-flush mt-3 mt-md-0" id="afcRight">			
-				
-					<!-- 7. Custom minor (layout, hapus bagian, dll) -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft7" aria-expanded="false" aria-controls="fcLeft7">
-								<b>Apakah bisa request custom minor (ubah tata letak, hilangkan bagian, tanpa foto, dll)?</b>
-							</button>
-						</span>
-						<div id="fcLeft7" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Tentu bisa. Karena pengerjaan dilakukan tim desainer, Anda bisa request perubahan tata letak, menghilangkan bagian tertentu, penambahan acara, atau tanpa foto.</i>
-							</div>
-						</div>
-					</div>				
-				
-					<!-- 8. Harga sama untuk foto/kartun/tanpa foto -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcLeft8" aria-expanded="false" aria-controls="fcLeft8">
-								<b>Apakah harga sama jika menggunakan foto, kartun, atau tanpa foto?</b>
-							</button>
-						</span>
-						<div id="fcLeft8" class="accordion-collapse collapse" data-bs-parent="#afcLeft">
-							<div class="accordion-body">
-								<i>Harga yang kami berikan sama, baik undangan menggunakan foto asli, kartun/ilustrasi, maupun tanpa foto.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-4" aria-expanded="false"
+                        aria-controls="faq-4">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah bisa bebas request
+                            lagu?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-4" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Silahkan bebas request lagu sesuai keinginan sebagai backsound dari undangan web digital
+                        pilihannya.
+                    </div>
+                </div>
 
-					<!-- 9. Batasan foto galeri + biaya tambahan -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight1" aria-expanded="false" aria-controls="fcRight1">
-								<b>Apakah ada batasan jumlah foto untuk galeri?</b>
-							</button>
-						</span>
-						<div id="fcRight1" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Maksimal 6 foto di galeri. Jika lebih dari 6, tersedia tambahan biaya <b>Rp10.000 per 4 foto</b>.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-5" aria-expanded="false"
+                        aria-controls="faq-5">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apa saja isian data yang perlu
+                            dipersiapkan untuk membuat undangan pernikahan online?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-5" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Setelah konfirmasi pembayaran dengan admin kami, akan kami infokan form kelengkapan data untuk
+                        undangannya.
+                    </div>
+                </div>
 
-					<!-- 10. Revisi + biaya tambahan (gabung info 2x kuota) -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight2" aria-expanded="false" aria-controls="fcRight2">
-								<b>Apakah bebas revisi? Bagaimana ketentuannya?</b>
-							</button>
-						</span>
-						<div id="fcRight2" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Kami menyediakan <b>2 kuota revisi</b>. Setiap kuota bisa berisi banyak poin revisi sekaligus. Jika kuota habis, ada tambahan biaya <b>Rp10.000 per revisi</b>.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-6" aria-expanded="false"
+                        aria-controls="faq-6">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Saya sudah punya rancangan
+                            desain, apakah bisa dibuat jadi undangan website dan berapa harganya?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-6" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Tentu bisa, silahkan bisa konsultasikan dengan CS kami dahulu untuk layanan custom desainnya.
+                    </div>
+                </div>
 
-					<!-- 11. Cara kirim undangan ke tamu -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight3" aria-expanded="false" aria-controls="fcRight3">
-								<b>Bagaimana cara menyebarkan undangan ke para tamu?</b>
-							</button>
-						</span>
-						<div id="fcRight3" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Kami menyediakan fitur kirim undangan yang memudahkan Anda menyebarkan link undangan via WhatsApp, email, atau media sosial. Panduan lengkap akan kami berikan setelah undangan jadi.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-7" aria-expanded="false"
+                        aria-controls="faq-7">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah bisa request custom minor
+                            selain teks dan foto?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-7" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Tentu bisa kak, dikarenakan pengerjaan sepenuhnya dibantu oleh tim desainer kami. Jadinya kaka
+                        bisa request custom minor untuk perubahan tata letak, menghilangkan bagian tertentu, penambahan
+                        acara, tanpa foto, dll.
+                    </div>
+                </div>
 
-					<!-- 12. Buku tamu digital + QR Check-in (dari kompetitor) 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight4" aria-expanded="false" aria-controls="fcRight4">
-								<b>Apakah tersedia buku tamu digital dengan QR code check-in?</b>
-							</button>
-						</span>
-						<div id="fcRight4" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Ya, tersedia buku tamu digital yang dilengkapi QR code check-in untuk mendata tamu saat hari acara berlangsung.</i>
-							</div>
-						</div>
-					</div>
-					-->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-8" aria-expanded="false"
+                        aria-controls="faq-8">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Bagaimana cara pesannya?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-8" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Silahkan hubungi kami melalui WhatsApp dahulu, untuk konsultasi segala bentuk pertanyaan ataupun
+                        pemesanan undangan pernikahan digital. Kami akan sangat senang bisa membantu segala kebutuhan
+                        undangan pernikahan kamu.
+                    </div>
+                </div>
 
-					<!-- 13. Halaman dashboard untuk kelola undangan (dari kompetitor) 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight5" aria-expanded="false" aria-controls="fcRight5">
-								<b>Apakah ada halaman dashboard untuk mengelola undangan?</b>
-							</button>
-						</span>
-						<div id="fcRight5" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Kami menyediakan halaman dashboard lengkap: input nama tamu, kirim undangan, kelola RSVP, kelola komentar, buku tamu, dan pengaturan undangan private/publik.</i>
-							</div>
-						</div>
-					</div>
-					-->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-9" aria-expanded="false"
+                        aria-controls="faq-9">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah harga sama jika
+                            menggunakan foto dan jika menggunakan kartun/tanpa foto?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-9" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Harga yang kami berikan sama jika undangan menggunakan foto / kartun / tanpa foto.
+                    </div>
+                </div>
 
-					<!-- 14. Undangan private (hanya tamu terdaftar) - dari kompetitor 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight6" aria-expanded="false" aria-controls="fcRight6">
-								<b>Apakah bisa membuat undangan private yang hanya diakses tamu terdaftar?</b>
-							</button>
-						</span>
-						<div id="fcRight6" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Bisa. Kami menyediakan fitur undangan private agar hanya orang yang Anda daftarkan yang dapat mengakses undangan.</i>
-							</div>
-						</div>
-					</div>
-					-->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-10" aria-expanded="false"
+                        aria-controls="faq-10">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah ada batasan foto untuk
+                            galeri?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-10" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Untuk foto khusus di galeri maks 6 foto, jika foto lebih dari 6 ada tambahan biaya 10rb per 4
+                        foto.
+                    </div>
+                </div>
 
-					<!-- 15. Hapus komentar negatif (dari kompetitor) 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight7" aria-expanded="false" aria-controls="fcRight7">
-								<b>Apakah bisa menghapus komentar atau ucapan dari tamu?</b>
-							</button>
-						</span>
-						<div id="fcRight7" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Tentu. Anda dapat menghapus komentar negatif atau tidak diinginkan melalui halaman dashboard.</i>
-							</div>
-						</div>
-					</div>
-					-->
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-11" aria-expanded="false"
+                        aria-controls="faq-11">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Apakah bebas revisi?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-11" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Kami menyediakan 2x kuota revisi. Untuk setiap kuota silahkan dapat dimaksimalkan dengan
+                        dibuatkan list revisi terlebih dahulu. Jika kuota revisi telah habis ada penambahan 10rb untuk
+                        revisinya.
+                    </div>
+                </div>
 
-					<!-- 16. Layanan CS aktif (dari kompetitor, disesuaikan) -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight8" aria-expanded="false" aria-controls="fcRight8">
-								<b>Apakah layanan customer service aktif 24 jam?</b>
-							</button>
-						</span>
-						<div id="fcRight8" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Kami siap membantu konsultasi dan pertanyaan Anda. Tim CS aktif <b>24/7</b>, namun untuk pertanyaan di luar jam kerja (setelah pukul 20.00) akan kami respon secara perlahan.</i>
-							</div>
-						</div>
-					</div>
+                <div class="faq-item bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                    <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-3
+                                   hover:bg-gray-50 transition-colors" data-faq="faq-12" aria-expanded="false"
+                        aria-controls="faq-12">
+                        <span class="font-semibold text-gray-800 text-sm sm:text-base">Cara sebar pengiriman undangan
+                            nikah online bagaimana?</span>
+                        <i class="fas fa-chevron-down flex-shrink-0 transition-transform duration-300"
+                            style="color:#fbbd11;"></i>
+                    </button>
+                    <div id="faq-12" class="faq-body hidden px-5 pb-4 text-gray-600 text-sm leading-relaxed">
+                        Kami menyediakan fitur kirim undangan yang memudahkan kamu untuk menyebar undangan di dalam
+                        aplikasi ini. Setelah hasil jadi akan kami infokan selengkapnya untuk cara kirim undangannya.
+                    </div>
+                </div>
 
-					<!-- 17. Custom domain (dari kompetitor) 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight9" aria-expanded="false" aria-controls="fcRight9">
-								<b>Apakah bisa menggunakan nama domain sendiri? Berapa biayanya?</b>
-							</button>
-						</span>
-						<div id="fcRight9" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Ya, tersedia paket custom domain: domain my.id mulai <b>Rp30.000</b>. Untuk domain .com, .id, .web.id, .net, dan lainnya harga berbeda sesuai ekstensi.</i>
-							</div>
-						</div>
-					</div>
-					-->
+            </div>
+        </section>
 
-					<!-- 18. Program reseller (dari kompetitor) 
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight10" aria-expanded="false" aria-controls="fcRight10">
-								<b>Apakah ada program reseller atau afiliasi?</b>
-							</button>
-						</span>
-						<div id="fcRight10" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Kami menyediakan program reseller dengan harga khusus, bisa menggunakan brand sendiri, serta dilengkapi materi & katalog. Silakan hubungi CS untuk informasi lebih lanjut.</i>
-							</div>
-						</div>
-					</div>
-					-->
+    </main>
 
-					<!-- 19. Cara pesan (penutup) -->
-					<div class="accordion-item">
-						<span class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fcRight11" aria-expanded="false" aria-controls="fcRight11">
-								<b>Bagaimana cara memesan undangan digital?</b>
-							</button>
-						</span>
-						<div id="fcRight11" class="accordion-collapse collapse" data-bs-parent="#afcRight">
-							<div class="accordion-body">
-								<i>Silakan hubungi kami melalui WhatsApp untuk konsultasi dan pemesanan. Kami akan dengan senang hati membantu kebutuhan undangan pernikahan Anda.</i>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ================== AKHIR ACCORDION KOLOM KANAN ================== -->
+    <!-- ======== FOOTER ======== -->
+    <footer style="background: linear-gradient(135deg, #1a1307 0%, #2a1f07 60%, #1a1307 100%); color:#fff;">
+        <div class="max-w-4xl mx-auto px-4 py-10 text-center">
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold mb-2" style="color:#fbbd11;">krafta.</h3>
+            <p class="text-sm mb-4" style="color:rgba(255,244,200,0.85);">Digital Web Invitation Services</p>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,244,200,0.55);">
+                Jl. Sungai Bongka, Kel. Uemalingku, Kec. Ratolindo, Kab. Tojo Una Una<br>
+                <span class="mt-1 block">
+                    <i class="fab fa-whatsapp mr-1"></i>
+                    <a href="https://wa.me/6281370705753" style="color:rgba(255,244,200,0.55);"
+                        class="hover:text-yellow-300 transition-colors">62813 7070 5753</a>
+                    &nbsp;|&nbsp;
+                    <a href="https://wa.me/6289529635753" style="color:rgba(255,244,200,0.55);"
+                        class="hover:text-yellow-300 transition-colors">62895 2963 5753</a>
+                </span>
+            </p>
+            <div class="mt-6 pt-5 text-xs"
+                style="border-top: 1px solid rgba(251,189,17,0.2); color:rgba(255,244,200,0.35);">
+                &copy; 2026 krafta.
+            </div>
+        </div>
+    </footer>
 
-				<!-- Optional: CSS agar dua kolom sejajar di layar md ke atas -->
-				<style>
-					@media (min-width: 768px) {
-						#afcLeft, #afcRight {
-							width: 48%;
-							float: left;
-							margin-right: 2%;
-						}
-						#afcRight {
-							margin-right: 0;
-						}
-						.row.mb-5 > .col-12 {
-							overflow: auto;
-						}
-					}
-				</style>
-
-			</div>
-		</div>		
-		
-		
-		
-		<footer class="py-3 my-4 text-center">
-			<p class="text-center text-body-secondary">
-				<h3>krafta.</h3>
-				<br>
-				Digital Web Invitation Services based in Ampana<br>
-				Jl. Sungai Bongka, Kel. Uemalingku, Kec. Ratolindo, Kab. Tojo Una Una<br>
-				Kontak WA: 62813 7070 5753 | 62895 2963 5753<br>
-			</p>
-			<p class="text-center text-body-secondary">© 2026 krafta.</p>
-		</footer>
-
-
-
+    <!-- ======== LOADING INDICATOR ======== -->
+    <div id="loading-indicator" class="loading-indicator">
+        <i class="fas fa-spinner fa-spin mr-2"></i>
+        Memuat tema...
     </div>
-	
-	
-	
-	<!-- Loading Indicator -->
-	<div id="loading-indicator" class="loading-indicator">
-		<i class="fas fa-spinner fa-spin me-2"></i>
-		Memuat tema...
-	</div>
 
-	<!-- End of Content Message (will be added by JS) -->
-	<div id="end-of-content" style="display: none;"></div>	
-		
-	
-	
-	
-	
+    <!-- End of Content (inserted by JS) -->
+    <div id="end-of-content" style="display: none;"></div>
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
+    <!-- ======== SCRIPTS ======== -->
     <!-- Main App JS (ES6 Module) -->
     <script type="module" src="js/app.js"></script>
-    
+
+    <!-- FAQ Accordion (vanilla, no Bootstrap required) -->
+    <script>
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-faq');
+                const body = document.getElementById(targetId);
+                const icon = btn.querySelector('i.fa-chevron-down');
+                const isOpen = !body.classList.contains('hidden');
+
+                // Close all
+                document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+                document.querySelectorAll('.faq-btn i.fa-chevron-down').forEach(i => {
+                    i.style.transform = 'rotate(0deg)';
+                    i.closest('.faq-btn').setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle clicked
+                if (!isOpen) {
+                    body.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+
     <!-- Fallback untuk browser yang tidak support ES6 modules -->
     <script nomodule>
         document.getElementById('tema-container').innerHTML = `
-            <div class="col-12 text-center py-5">
-                <div class="alert alert-warning">
-                    <h4>Browser Tidak Mendukung</h4>
-                    <p>Silahkan gunakan browser modern untuk melihat katalog ini.</p>
+            <div class="col-span-full text-center py-12">
+                <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 max-w-sm mx-auto">
+                    <h4 class="font-semibold text-amber-800 mb-2">Browser Tidak Mendukung</h4>
+                    <p class="text-amber-700 text-sm">Silahkan gunakan browser modern untuk melihat katalog ini.</p>
                 </div>
             </div>
         `;
     </script>
-    
-    <!-- Protector Script
-    <script src="assets/protector.js" crossorigin="anonymous"></script>
-	 -->
+
 </body>
 
 </html>

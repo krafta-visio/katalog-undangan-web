@@ -1,72 +1,139 @@
-.google-sans-regular {
-  font-family: "Google Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 0;
-}
-
-.young-serif-regular {
-  font-family: "Young Serif", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body{
-	font-family: "Google Sans", sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6{
-	font-family: "Young Serif", serif;
-}
-
-
 /* ============================================
-   CSS THEME CATALOG - ORGANIZED HIERARCHY
+   KRAFTA KATALOG - CUSTOM STYLES
+   Base: Tailwind CSS v3 (CDN)
    ============================================ */
 
-/* ============ 1. RESET & BASE STYLES ============ */
-
-/* Hapus semua !important yang tidak perlu */
-.theme-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-    filter: none;
+/* ===== 0. SITE HEADER BACKGROUND ===== */
+.site-header {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+        url('../images/bg-header.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #1a1307; /* fallback jika gambar gagal load */
 }
 
-/* ============ 2. IMAGE CONTAINER & STATES ============ */
+/* ===== 1. FONT BASE ===== */
+body {
+    font-family: "Google Sans", sans-serif;
+}
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Young Serif", serif;
+}
+
+/* ===== 2. FILTER BADGES ===== */
+.filter-badge {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.35em 0.9em;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1.5px solid #e2e8f0;
+    background: #fff;
+    color: #475569;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+}
+
+.filter-badge:hover {
+    border-color: #c044f1;
+    color: #a326d4;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(160, 38, 212, 0.15);
+}
+
+.filter-badge.active {
+    background: #fbbd11;
+    border-color: transparent;
+    color: #3c0552;
+    box-shadow: 0 2px 10px rgba(251, 189, 17, 0.45);
+}
+
+.filter-badge.filter-badge--type {
+    border-color: #bae6fd;
+    background: #f0f9ff;
+    color: #0369a1;
+}
+
+.filter-badge.filter-badge--type:hover {
+    border-color: #38bdf8;
+    color: #0284c7;
+}
+
+.filter-badge.filter-badge--type.active {
+    background: #fbbd11;
+    border-color: transparent;
+    color: #1e3a5f;
+    box-shadow: 0 2px 10px rgba(251, 189, 17, 0.4);
+}
+
+/* ===== 3. THEME CARD ===== */
+.theme-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(251, 189, 17, 0.20);
+    border-color: #fbbd11;
+}
+
+.theme-card.error {
+    border-color: #fca5a5;
+    background: linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%);
+}
+
+/* ===== 4. IMAGE CONTAINER ===== */
 .image-container {
     position: relative;
     height: 200px;
     overflow: hidden;
-    background: #f8f9fa; /* Light gray background */
+    background: #f1f5f9;
+    flex-shrink: 0;
 }
 
-/* Image States */
+@media (max-width: 640px) {
+    .image-container {
+        height: 170px;
+    }
+}
+
+.theme-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
 .theme-image.loaded {
     opacity: 1;
 }
 
-.theme-image:not(.loaded) {
-    opacity: 0.7;
-}
-
 .theme-image.error {
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
-/* Image Loading Overlay */
+.theme-card:hover .theme-image {
+    transform: scale(1.06);
+}
+
+/* Image loading overlay */
 .image-loading {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #f8f9fa;
+    inset: 0;
+    background: #f1f5f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,126 +143,11 @@ h1, h2, h3, h4, h5, h6{
     display: none;
 }
 
-/* Image Hover Effects */
-.theme-card:hover .theme-image {
-    transform: scale(1.05);
-}
-
-/* ============ 3. SKELETON LOADING ============ */
-
-.skeleton-card {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Skeleton Elements */
-.skeleton-image {
-    height: 200px;
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.skeleton-line {
-    height: 12px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    animation: shimmer 1.5s infinite;
-}
-
-.skeleton-title {
-    height: 20px;
-    width: 70%;
-    margin: 0 auto;
-}
-
-.skeleton-badge {
-    width: 60px;
-    height: 20px;
-    background: #f0f0f0;
-    border-radius: 10px;
-    animation: shimmer 1.5s infinite;
-}
-
-.skeleton-button {
-    width: 100px;
-    height: 36px;
-    background: #f0f0f0;
-    border-radius: 4px;
-    animation: shimmer 1.5s infinite;
-}
-
-/* Skeleton Animation */
-@keyframes shimmer {
-    0% {
-        background-position: -200% 0;
-    }
-    100% {
-        background-position: 200% 0;
-    }
-}
-
-/* ============ 4. THEME CARD COMPONENTS ============ */
-
-.theme-card {
-    transition: all 0.3s ease;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: relative;
-    overflow: hidden;
-}
-
-.theme-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    border-color: #4dabf7;
-}
-
-/* Error State */
-.theme-card.error {
-    border-color: #fa5252;
-    background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
-}
-
-/* Card Content */
-.theme-category {
-    font-size: 0.75rem;
-    color: #868e96;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.theme-description {
-    line-height: 1.4;
-    min-height: 40px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.theme-meta {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
-}
-
-/* Image Overlay */
+/* Image hover overlay */
 .image-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.08) 0%, rgba(96,0,128,0.25) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
@@ -215,292 +167,216 @@ h1, h2, h3, h4, h5, h6{
     justify-content: flex-end;
 }
 
-/* ============ 5. LOADING INDICATOR ============ */
-
-.loading-indicator {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    display: none;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    gap: 8px;
-}
-
-.loading-indicator.show {
+/* ===== 5. CARD BODY ===== */
+.card-body {
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
     display: flex;
-    animation: slideUp 0.2s ease-out;
+    flex-direction: column;
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 20px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
+.theme-category {
+    font-size: 0.65rem;
+    color: #fbbd11;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
-/* ============ 6. INITIAL PROMPT ============ */
+.theme-title {
+    font-family: "Young Serif", serif;
+    font-size: 1.05rem;
+    color: #1e1b4b;
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+}
 
+.theme-description {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 38px;
+    flex: 1;
+}
+
+.theme-meta {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 0.6rem 0;
+}
+
+.theme-badge {
+    font-size: 0.7rem;
+    padding: 0.2em 0.65em;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.theme-badge--category {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.theme-badge--type {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Card action buttons */
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 0.75rem;
+}
+
+.btn-preview {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0.45rem 0.5rem;
+    border-radius: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fbbd11, #f59e0b);
+    color: #1a1307;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.btn-preview:hover {
+    background: linear-gradient(135deg, #fcd34d, #fbbd11);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(251, 189, 17, 0.45);
+    color: #1a1307;
+}
+
+.btn-order {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0.45rem 0.5rem;
+    border-radius: 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.btn-order:hover {
+    background: linear-gradient(135deg, #4ade80, #16a34a);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    color: #fff;
+}
+
+/* ===== 6. SKELETON LOADING ===== */
+/* .skeleton-card-wrapper — inherits grid cell sizing from parent grid */
+
+.skeleton-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    height: 100%;
+}
+
+.skeleton-image {
+    height: 200px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite;
+}
+
+.skeleton-line {
+    height: 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite;
+}
+
+.skeleton-title {
+    height: 18px;
+    width: 65%;
+    margin: 0 auto 10px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s infinite;
+}
+
+.skeleton-badge {
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: shimmer 1.8s infinite;
+    display: inline-block;
+}
+
+.skeleton-button {
+    width: 100%;
+    height: 34px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    border-radius: 0.6rem;
+    animation: shimmer 1.8s infinite;
+}
+
+@keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ===== 7. INITIAL SCROLL PROMPT ===== */
 .initial-load-prompt {
     text-align: center;
-    padding: 3rem 0;
-    color: #868e96;
-    transition: opacity 0.3s ease;
-    animation: pulse 1.5s infinite;
+    padding: 3.5rem 1rem;
+    color: #94a3b8;
+    animation: pulse-slow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-.initial-load-prompt i {
-    display: block;
-    margin-bottom: 1rem;
-    color: #adb5bd;
-    font-size: 2rem;
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1; }
 }
 
-@keyframes pulse {
-    0%, 100% { 
-        opacity: 0.7; 
-    }
-    50% { 
-        opacity: 1; 
-    }
-}
-
-/* ============ 7. FILTER BADGES ============ */
-
-.filter-badge {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0.5em 1em;
-    font-weight: 500;
-}
-
-.filter-badge:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.filter-badge.active {
-    box-shadow: 0 2px 8px rgba(13, 110, 253, 0.25);
-}
-
-/* ============ 8. BACK TO TOP BUTTON ============ */
-
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: none;
-    z-index: 999;
-    border: none;
-    background: #0d6efd;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#back-to-top:hover {
-    background: #0b5ed7;
-    transform: translateY(-2px);
-}
-
-/* ============ 9. RESPONSIVE DESIGN ============ */
-
-/* Tablet */
-@media (max-width: 768px) {
-    .image-container {
-        height: 180px;
-    }
-    
-    .skeleton-image {
-        height: 180px;
-    }
-    
-    .theme-card:hover {
-        transform: translateY(-2px);
-    }
-    
-    .theme-meta {
-        font-size: 0.8rem;
-    }
-    
-    .loading-indicator {
-        bottom: 10px;
-        padding: 10px 20px;
-        font-size: 0.8rem;
-    }
-    
-    .initial-load-prompt {
-        padding: 2rem 0;
-    }
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-    .image-container {
-        height: 150px;
-    }
-    
-    .skeleton-image {
-        height: 150px;
-    }
-    
-    .theme-description {
-        -webkit-line-clamp: 3;
-        min-height: 60px;
-        font-size: 0.9rem;
-    }
-    
-    .theme-category {
-        font-size: 0.7rem;
-    }
-    
-    .loading-indicator {
-        width: 90%;
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .filter-badge {
-        padding: 0.4em 0.8em;
-        font-size: 0.9rem;
-    }
-    
-    #back-to-top {
-        width: 45px;
-        height: 45px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
-/* Small Mobile */
-@media (max-width: 375px) {
-    .image-container {
-        height: 130px;
-    }
-    
-    .skeleton-image {
-        height: 130px;
-    }
-    
-    .theme-description {
-        min-height: 50px;
-        font-size: 0.85rem;
-    }
-}
-
-/* ============ 10. ERROR STATES ============ */
-
-.error-card .card-title {
-    color: #495057;
-}
-
-.error-placeholder {
-    width: 100%;
-    color: #868e96;
-    text-align: center;
-    padding: 2rem;
-}
-
-/* ============ 11. UTILITY CLASSES ============ */
-
-/* Hide element */
-.hidden {
-    display: none !important;
-}
-
-/* Fade in animation */
-.fade-in {
-    animation: fadeIn 0.3s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Smooth transition for all interactive elements */
-.theme-card,
-.filter-badge,
-#back-to-top,
-.theme-image {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ============ 12. PRINT STYLES ============ */
-
-@media print {
-    .loading-indicator,
-    #back-to-top,
-    .initial-load-prompt,
-    .filter-badge {
-        display: none !important;
-    }
-    
-    .theme-card {
-        break-inside: avoid;
-        box-shadow: none !important;
-        border: 1px solid #ddd !important;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Infinite Scroll Trigger */
-.infinite-scroll-trigger {
-    height: 1px;
-    width: 100%;
-    visibility: hidden;
-    margin: 20px 0;
-    position: relative;
-    top: -100px; /* Trigger lebih awal sebelum mencapai FAQ */
-}
-
-/* Loading Indicator fix */
+/* ===== 8. LOADING INDICATOR ===== */
 .loading-indicator {
     position: fixed;
-    bottom: 20px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    background: rgba(15, 3, 31, 0.88);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
     display: none;
     z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     align-items: center;
     gap: 8px;
     opacity: 0;
@@ -510,22 +386,108 @@ h1, h2, h3, h4, h5, h6{
 .loading-indicator.show {
     display: flex;
     opacity: 1;
-    animation: slideUp 0.2s ease-out;
+    animation: slideUpIndicator 0.25s ease-out;
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 20px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-}
-
-/* Loading indicator hidden state */
 .loading-indicator.hidden {
     display: none !important;
     opacity: 0 !important;
+}
+
+@keyframes slideUpIndicator {
+    from { opacity: 0; transform: translateX(-50%) translateY(16px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ===== 9. INFINITE SCROLL TRIGGER ===== */
+.infinite-scroll-trigger {
+    height: 1px;
+    width: 100%;
+    visibility: hidden;
+    margin: 10px 0;
+    position: relative;
+    top: -80px;
+}
+
+/* ===== 10. BACK TO TOP ===== */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: none;
+    z-index: 999;
+    border: none;
+    background: linear-gradient(135deg, #c044f1, #871cae);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(160, 38, 212, 0.4);
+}
+
+#back-to-top:hover {
+    background: linear-gradient(135deg, #d876fd, #a326d4);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(160, 38, 212, 0.5);
+}
+
+/* ===== 11. UTILITY ===== */
+.hidden { display: none !important; }
+
+.fade-in {
+    animation: fadeInCard 0.35s ease-out;
+}
+
+@keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 12. STATUS MESSAGES ===== */
+.status-empty,
+.status-end,
+.status-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-radius: 1.25rem;
+}
+
+.status-empty {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+}
+
+.status-end {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+}
+
+.status-error {
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+}
+
+/* ===== 13. PRINT ===== */
+@media print {
+    .loading-indicator,
+    #back-to-top,
+    .initial-load-prompt,
+    .filter-badge {
+        display: none !important;
+    }
+
+    .theme-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
 }

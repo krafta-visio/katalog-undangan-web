@@ -10,17 +10,19 @@ class SkeletonLoader {
 
     createSkeletonCard() {
         return `
-            <div class='col-lg-4 col-md-6 col-sm-12 mb-5'>
-                <div class='card h-100 theme-card skeleton-card'>
-                    <div class='card-img-top skeleton-image'></div>
-                    <div class='card-body text-center'>
-                        <div class='skeleton-line mb-2'></div>
-                        <div class='skeleton-line skeleton-title mb-3'></div>
-                        <div class='d-flex justify-content-between mb-3'>
+            <div class='skeleton-card-wrapper'>
+                <div class='skeleton-card'>
+                    <div class='skeleton-image'></div>
+                    <div style='padding:1rem;text-align:center;'>
+                        <div class='skeleton-line' style='width:40%;margin:0 auto 8px;'></div>
+                        <div class='skeleton-title'></div>
+                        <div class='skeleton-line' style='width:80%;margin:0 auto 6px;'></div>
+                        <div class='skeleton-line' style='width:60%;margin:0 auto 12px;'></div>
+                        <div style='display:flex;gap:6px;justify-content:center;margin-bottom:12px;'>
                             <div class='skeleton-badge'></div>
                             <div class='skeleton-badge'></div>
                         </div>
-                        <div class='d-flex justify-content-evenly gap-2 mt-4'>
+                        <div style='display:flex;gap:8px;'>
                             <div class='skeleton-button'></div>
                             <div class='skeleton-button'></div>
                         </div>
@@ -53,11 +55,9 @@ class SkeletonLoader {
     hide() {
         if (!this.container) return;
         
-        const skeletonCards = this.container.querySelectorAll('.skeleton-card');
+        const skeletonCards = this.container.querySelectorAll('.skeleton-card-wrapper');
         skeletonCards.forEach(card => {
-            if (card.parentNode) {
-                card.parentNode.remove();
-            }
+            card.remove();
         });
     }
 

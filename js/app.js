@@ -391,39 +391,43 @@ class ThemeCatalog {
         const placeholder = 'images/placeholder.jpg';
         
         return `
-            <div class='col-lg-4 col-md-6 col-sm-12 mb-5 theme-item' data-theme-id="${theme.id}">
-                <div class='card h-100 theme-card'>
+            <div class='theme-item fade-in' data-theme-id="${theme.id}">
+                <div class='theme-card'>
                     <div class="image-container">
                         <img src="${placeholder}"
                              data-src="${imagePath}"
-                             class="card-img-top theme-image lazy-image"
+                             class="theme-image lazy-image"
                              alt="${theme.displayName}"
                              loading="lazy"
                              width="400"
                              height="300">
                         <div class="image-loading"></div>
-                    </div>
-                    <div class='card-body text-center'>
-                        <span class="theme-category">Digital Web Invitation Theme</span>
-                        <h3 class='card-title mb-2'>${theme.displayName}</h3>
-                        <p class="theme-description text-muted small mb-3">${theme.description}</p>
-                        <div class="theme-meta mb-3">
-                            <span class="badge bg-secondary me-1">${theme.category}</span>
-                            <span class="badge bg-info">${theme.type}</span>
+                        <div class="image-overlay">
+                            <div class="image-badges">
+                                <span class="theme-badge theme-badge--type">${theme.type}</span>
+                            </div>
                         </div>
-                        <hr class="my-3">
-                        <div class='d-flex justify-content-evenly gap-2'>
+                    </div>
+                    <div class='card-body'>
+                        <span class="theme-category">Digital Web Invitation Theme</span>
+                        <h3 class='theme-title'>${theme.displayName}</h3>
+                        <p class="theme-description">${theme.description}</p>
+                        <div class="theme-meta">
+                            <span class="theme-badge theme-badge--category">${theme.category}</span>
+                            <span class="theme-badge theme-badge--type">${theme.type}</span>
+                        </div>
+                        <div class='card-actions'>
                             <a href='pilihan-tema/${theme.name}' 
-                               class='btn btn-primary btn-sm flex-fill'
+                               class='btn-preview'
                                target='_blank'
                                rel="noopener">
-                                <i class="fas fa-eye me-1"></i> Preview
+                                <i class="fas fa-eye"></i> Preview
                             </a>
                             <a href='${whatsappUrl}' 
-                               class='btn btn-success btn-sm flex-fill'
+                               class='btn-order'
                                target='_blank'
                                rel="noopener">
-                                <i class="fas fa-shopping-cart me-1"></i> Order
+                                <i class="fab fa-whatsapp"></i> Order
                             </a>
                         </div>
                     </div>
@@ -612,12 +616,10 @@ class ThemeCatalog {
         console.log('📭 No results found');
         
         this.themesContainer.innerHTML = `
-            <div class="col-12 text-center py-5">
-                <div class="alert alert-info">
-                    <i class="fas fa-search fa-2x mb-3 text-info"></i>
-                    <h4>Tidak ada tema yang ditemukan</h4>
-                    <p>Silahkan pilih kategori filter lainnya.</p>
-                </div>
+            <div class="status-empty">
+                <i class="fas fa-search text-3xl mb-3 block opacity-50"></i>
+                <p class="font-semibold text-lg mb-1">Tidak ada tema yang ditemukan</p>
+                <p class="text-sm opacity-75">Silahkan pilih kategori filter lainnya.</p>
             </div>
         `;
         
@@ -628,11 +630,9 @@ class ThemeCatalog {
         console.log(`🏁 Showing end message for ${this.filteredThemes.length} themes`);
         
         const endMessage = `
-            <div class="col-12 text-center py-4">
-                <div class="alert alert-light border">
-                    <i class="fas fa-check-circle text-success me-2"></i>
-                    <span>Semua ${this.filteredThemes.length} tema telah ditampilkan</span>
-                </div>
+            <div class="status-end">
+                <i class="fas fa-check-circle text-xl mb-2 block"></i>
+                <span class="font-medium">Semua ${this.filteredThemes.length} tema telah ditampilkan</span>
             </div>
         `;
         
@@ -644,15 +644,14 @@ class ThemeCatalog {
         console.error('❌ Showing error:', message);
         
         this.themesContainer.innerHTML = `
-            <div class="col-12 text-center py-5">
-                <div class="alert alert-danger">
-                    <i class="fas fa-exclamation-triangle fa-2x mb-3"></i>
-                    <h4>Terjadi Kesalahan</h4>
-                    <p>${message}</p>
-                    <button class="btn btn-outline-danger mt-2" onclick="location.reload()">
-                        <i class="fas fa-redo me-1"></i> Muat Ulang Halaman
-                    </button>
-                </div>
+            <div class="status-error">
+                <i class="fas fa-exclamation-triangle text-3xl mb-3 block"></i>
+                <p class="font-semibold text-lg mb-1">Terjadi Kesalahan</p>
+                <p class="text-sm mb-4 opacity-75">${message}</p>
+                <button style="background:none;border:1.5px solid currentColor;padding:0.4rem 1.2rem;border-radius:0.5rem;cursor:pointer;font-weight:600;color:inherit;"
+                        onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Muat Ulang
+                </button>
             </div>
         `;
         
@@ -705,14 +704,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('tema-container');
             if (container) {
                 container.innerHTML = `
-                    <div class="col-12 text-center py-5">
-                        <div class="alert alert-danger">
-                            <h4>Gagal Memuat Katalog</h4>
-                            <p>${error.message}</p>
-                            <button class="btn btn-outline-danger" onclick="location.reload()">
-                                <i class="fas fa-redo me-1"></i> Refresh Halaman
-                            </button>
-                        </div>
+                    <div class="status-error">
+                        <i class="fas fa-exclamation-triangle text-3xl mb-3 block"></i>
+                        <p class="font-semibold text-lg mb-1">Gagal Memuat Katalog</p>
+                        <p class="text-sm mb-4 opacity-75">${error.message}</p>
+                        <button style="background:none;border:1.5px solid currentColor;padding:0.4rem 1.2rem;border-radius:0.5rem;cursor:pointer;font-weight:600;color:inherit;"
+                                onclick="location.reload()">
+                            <i class="fas fa-redo"></i> Refresh Halaman
+                        </button>
                     </div>
                 `;
             }
