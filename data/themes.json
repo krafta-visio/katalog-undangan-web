@@ -238,6 +238,16 @@
 			  "description": "Tema dengan kupu-kupu berwarna-warni"
 			},
 	
+			{
+			  "id": 125,
+			  "name": "butterfly-fx-05",
+			  "displayName": "Butterfly-FX-05",
+			  "image": "cover.png",
+			  "category": "butterfly",
+			  "type": "effect",
+			  "description": "Tema dengan kupu-kupu berwarna-warni"
+			},
+	
 	
 	
     {
