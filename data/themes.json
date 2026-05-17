@@ -1,5 +1,19 @@
 {
   "themes": [
+  
+    {
+      "id": 121,
+      "name": "new-boxed-01",
+      "displayName": "New-Boxed-01",
+      "image": "cover.png",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema dengan layout boxed yang rapi dan elegan"
+    },
+	
+	
+	
+	
     {
       "id": 1,
       "name": "aqiqah-givemeart-mks-01",
