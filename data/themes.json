@@ -1,37 +1,5 @@
 {
   "themes": [
-  
-    {
-      "id": 121,
-      "name": "new-boxed-01",
-      "displayName": "New-Boxed-01",
-      "image": "cover.png",
-      "category": "boxed",
-      "type": "scroll",
-      "description": "Tema dengan layout boxed yang rapi dan elegan"
-    },
-    {
-      "id": 122,
-      "name": "new-boxed-02",
-      "displayName": "New-Boxed-02",
-      "image": "cover.png",
-      "category": "boxed",
-      "type": "scroll",
-      "description": "Tema dengan layout boxed yang rapi dan elegan"
-    },
-    {
-      "id": 123,
-      "name": "new-boxed-03",
-      "displayName": "New-Boxed-03",
-      "image": "cover.png",
-      "category": "boxed",
-      "type": "scroll",
-      "description": "Tema dengan layout boxed yang rapi dan elegan"
-    },
-	
-	
-	
-	
     {
       "id": 1,
       "name": "aqiqah-givemeart-mks-01",
@@ -187,6 +155,40 @@
 			  "type": "scroll",
 			  "description": "Tema boxed dengan desain yang elegan"
 			},
+			
+			
+			
+					{
+					  "id": 121,
+					  "name": "new-boxed-01",
+					  "displayName": "New-Boxed-01",
+					  "image": "cover.png",
+					  "category": "boxed",
+					  "type": "scroll",
+					  "description": "Tema dengan layout boxed yang rapi dan elegan"
+					},
+					{
+					  "id": 122,
+					  "name": "new-boxed-02",
+					  "displayName": "New-Boxed-02",
+					  "image": "cover.png",
+					  "category": "boxed",
+					  "type": "scroll",
+					  "description": "Tema dengan layout boxed yang rapi dan elegan"
+					},
+					{
+					  "id": 123,
+					  "name": "new-boxed-03",
+					  "displayName": "New-Boxed-03",
+					  "image": "cover.png",
+					  "category": "boxed",
+					  "type": "scroll",
+					  "description": "Tema dengan layout boxed yang rapi dan elegan"
+					},
+			
+			
+			
+			
 	
 	
     {
