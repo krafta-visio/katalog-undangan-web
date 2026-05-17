@@ -10,6 +10,24 @@
       "type": "scroll",
       "description": "Tema dengan layout boxed yang rapi dan elegan"
     },
+    {
+      "id": 122,
+      "name": "new-boxed-02",
+      "displayName": "New-Boxed-02",
+      "image": "cover.png",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema dengan layout boxed yang rapi dan elegan"
+    },
+    {
+      "id": 123,
+      "name": "new-boxed-03",
+      "displayName": "New-Boxed-03",
+      "image": "cover.png",
+      "category": "boxed",
+      "type": "scroll",
+      "description": "Tema dengan layout boxed yang rapi dan elegan"
+    },
 	
 	
 	
