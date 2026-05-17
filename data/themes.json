@@ -218,7 +218,7 @@
       "type": "effect",
       "description": "Tema dengan animasi kupu-kupu yang menawan"
     },
-    {
+     {
       "id": 21,
       "name": "butterfly-fx-03",
       "displayName": "Butterfly-FX-03",
@@ -227,6 +227,19 @@
       "type": "effect",
       "description": "Tema dengan kupu-kupu berwarna-warni"
     },
+
+			{
+			  "id": 124,
+			  "name": "butterfly-fx-04",
+			  "displayName": "Butterfly-FX-04",
+			  "image": "cover.png",
+			  "category": "butterfly",
+			  "type": "effect",
+			  "description": "Tema dengan kupu-kupu berwarna-warni"
+			},
+	
+	
+	
     {
       "id": 22,
       "name": "card-01-mv",
