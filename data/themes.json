@@ -27,6 +27,40 @@
       "type": "scroll",
       "description": "Tema aqiqah minimalis dan menarik"
     },
+	
+	
+	
+    {
+      "id": 46,
+      "name": "jawa-01",
+      "displayName": "Jawa-01",
+      "image": "cover.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan nuansa budaya Jawa"
+    },
+    {
+      "id": 50,
+      "name": "minang-01",
+      "displayName": "Minang-01",
+      "image": "cover.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan budaya Minangkabau"
+    },
+    {
+      "id": 96,
+      "name": "sunda-01",
+      "displayName": "Sunda-01",
+      "image": "cover.png",
+      "category": "traditional",
+      "type": "scroll",
+      "description": "Tema dengan budaya Sunda"
+    },
+	
+	
+	
+	
     {
       "id": 4,
       "name": "autoplay-floral-dance-01",
@@ -471,15 +505,6 @@
       "description": "Tema pola dengan transisi yang mulus"
     },
     {
-      "id": 46,
-      "name": "jawa-01",
-      "displayName": "Jawa-01",
-      "image": "cover.png",
-      "category": "traditional",
-      "type": "scroll",
-      "description": "Tema dengan nuansa budaya Jawa"
-    },
-    {
       "id": 47,
       "name": "love-cartoon-01",
       "displayName": "LOVE-CARTOON-01",
@@ -505,15 +530,6 @@
       "category": "love",
       "type": "cartoon",
       "description": "Tema cinta dengan warna pastel yang lembut"
-    },
-    {
-      "id": 50,
-      "name": "minang-01",
-      "displayName": "Minang-01",
-      "image": "cover.png",
-      "category": "traditional",
-      "type": "scroll",
-      "description": "Tema dengan budaya Minangkabau"
     },
     {
       "id": 51,
@@ -926,15 +942,6 @@
       "category": "effect",
       "type": "snow",
       "description": "Tema dengan efek salju berkilau"
-    },
-    {
-      "id": 96,
-      "name": "sunda-01",
-      "displayName": "Sunda-01",
-      "image": "cover.png",
-      "category": "traditional",
-      "type": "scroll",
-      "description": "Tema dengan budaya Sunda"
     },
     {
       "id": 97,
