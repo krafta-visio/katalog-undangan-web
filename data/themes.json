@@ -368,6 +368,16 @@
 	
 	
 			{
+			  "id": 126,
+			  "name": "ethnic-sm-04",
+			  "displayName": "Ethnic-SM-04",
+			  "image": "cover.png",
+			  "category": "ethnic",
+			  "type": "scroll",
+			  "description": "Tema etnik modern dan menarik"
+			},	
+	
+			{
 			  "id": 31,
 			  "name": "frame-01",
 			  "displayName": "frame-01",
