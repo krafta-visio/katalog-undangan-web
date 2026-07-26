@@ -96,7 +96,7 @@ class ThemeCatalog {
         } catch (error) {
             console.error('❌ Failed to load themes data:', error);
             
-            // Fallback: coba lagi dengan cache
+            // Fallback
             try {
                 const fallbackResponse = await fetch('data/themes.json');
                 const fallbackData = await fallbackResponse.json();
@@ -147,7 +147,7 @@ class ThemeCatalog {
 
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY || document.documentElement.scrollTop;
-                this.backToTopBtn.style.display = scrollY > 300 ? 'block' : 'none';
+                this.backToTopBtn.style.display = scrollY > 300 ? 'flex' : 'none';
             });
         }
         
@@ -249,23 +249,22 @@ class ThemeCatalog {
         // Tampilkan trigger
         this.infiniteScrollTrigger.style.display = 'block';
         
-        // Setup IntersectionObserver dengan threshold lebih sensitif
+        // Setup IntersectionObserver
         this.scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && this.hasMore && !this.isLoading && !this.isLoadingMore) {
                     console.log('🎯 Infinite scroll trigger hit!');
                     
-                    // Debounce untuk mencegah multiple loads
                     clearTimeout(this.loadMoreTimeout);
                     this.loadMoreTimeout = setTimeout(() => {
                         this.loadMoreThemes();
-                    }, 100); // Delay kecil
+                    }, 100);
                 }
             });
         }, {
             root: null,
-            rootMargin: '100px 0px', // Load 100px sebelum mencapai trigger
-            threshold: 0.01 // Sangat sensitif
+            rootMargin: '150px 0px', // Load 150px sebelum trigger
+            threshold: 0.01
         });
         
         // Mulai observe trigger
@@ -275,14 +274,8 @@ class ThemeCatalog {
 
     async loadMoreThemes() {
         if (this.isLoadingMore || !this.hasMore) {
-            console.log('⏸️ Skipping loadMoreThemes:', {
-                isLoadingMore: this.isLoadingMore,
-                hasMore: this.hasMore
-            });
             return;
         }
-        
-        console.log('📦 Loading more themes...');
         
         this.isLoadingMore = true;
         this.showLoading();
@@ -293,7 +286,6 @@ class ThemeCatalog {
             const themesToShow = this.filteredThemes.slice(nextIndex, endIndex);
             
             if (themesToShow.length === 0) {
-                console.log('📭 No more themes to show');
                 this.hasMore = false;
                 this.hideLoading();
                 return;
@@ -302,7 +294,6 @@ class ThemeCatalog {
             // Show skeleton untuk batch baru
             this.skeletonLoader.showAppend(3);
             
-            // Delay kecil untuk UX
             await this.delay(150);
             
             // Render themes baru
@@ -312,32 +303,20 @@ class ThemeCatalog {
             this.currentIndex += themesToShow.length;
             this.hasMore = this.currentIndex < this.filteredThemes.length;
             
-            // Setup lazy loading untuk gambar baru
             this.setupLazyImages();
             
-            console.log(`✅ Loaded ${themesToShow.length} more themes, total: ${this.currentIndex}`);
-            
-            // Hide skeleton
             setTimeout(() => {
                 this.skeletonLoader.hide();
             }, 200);
             
-            // Jika masih ada data, setup ulang observer untuk batch berikutnya
             if (this.hasMore) {
-                console.log('🔄 Still more themes, resetting infinite scroll...');
-                // Setup ulang observer untuk trigger berikutnya
                 this.setupInfiniteScroll();
             } else {
-                console.log('🏁 All themes loaded');
                 this.showEndMessage();
-                
-                // Cleanup observer karena tidak ada lagi data
                 if (this.scrollObserver) {
                     this.scrollObserver.disconnect();
                     this.scrollObserver = null;
                 }
-                
-                // Sembunyikan trigger
                 if (this.infiniteScrollTrigger) {
                     this.infiniteScrollTrigger.style.display = 'none';
                 }
@@ -347,7 +326,6 @@ class ThemeCatalog {
             console.error('❌ Failed to load more themes:', error);
         } finally {
             this.isLoadingMore = false;
-            // PASTIKAN loading indicator selalu dihide
             setTimeout(() => {
                 this.hideLoading();
             }, 300);
@@ -377,8 +355,6 @@ class ThemeCatalog {
             this.themesContainer.innerHTML = '';
             this.themesContainer.appendChild(fragment);
         }
-        
-        console.log(`🎨 Rendered ${themes.length} theme cards`);
     }
 
     createThemeCard(theme) {
@@ -391,43 +367,43 @@ class ThemeCatalog {
         const placeholder = 'images/placeholder.jpg';
         
         return `
-            <div class='theme-item fade-in' data-theme-id="${theme.id}">
-                <div class='theme-card'>
-                    <div class="image-container">
+            <div class="col-lg-6 col-md-6 mb-4 theme-item" data-theme-id="${theme.id}">
+                <div class="katalog-card">
+                    <div class="katalog-card-img-wrapper">
                         <img src="${placeholder}"
                              data-src="${imagePath}"
-                             class="theme-image lazy-image"
+                             class="katalog-card-img lazy-image"
                              alt="${theme.displayName}"
-                             loading="lazy"
-                             width="400"
-                             height="300">
-                        <div class="image-loading"></div>
-                        <div class="image-overlay">
-                            <div class="image-badges">
-                                <span class="theme-badge theme-badge--type">${theme.type}</span>
+                             loading="lazy" />
+                        <div class="image-loading">
+                            <div class="spinner-border text-warning" role="status" style="width: 1.5rem; height: 1.5rem;">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
                         </div>
                     </div>
-                    <div class='card-body'>
-                        <span class="theme-category">Digital Web Invitation Theme</span>
-                        <h3 class='theme-title'>${theme.displayName}</h3>
-                        <p class="theme-description">${theme.description}</p>
-                        <div class="theme-meta">
-                            <span class="theme-badge theme-badge--category">${theme.category}</span>
-                            <span class="theme-badge theme-badge--type">${theme.type}</span>
+                    <div class="katalog-card-body">
+                        <div>
+                            <span class="theme-category mb-2">Digital Web Invitation Theme</span>
+                            <h3 class="katalog-card-title">${theme.displayName}</h3>
+                            <p class="katalog-card-desc mb-3">${theme.description}</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge bg-secondary text-light text-uppercase font-weight-bold" style="font-size: 0.65rem; border-radius: 0; letter-spacing: 0.05em;">${theme.category}</span>
+                                <span class="badge bg-secondary text-light text-uppercase font-weight-bold" style="font-size: 0.65rem; border-radius: 0; letter-spacing: 0.05em;">${theme.type}</span>
+                            </div>
                         </div>
-                        <div class='card-actions'>
-                            <a href='pilihan-tema/${theme.name}' 
-                               class='btn-preview'
-                               target='_blank'
+                        <div class="d-flex gap-2 w-100 mt-auto">
+                            <a href="pilihan-tema/${theme.name}" 
+                               class="btn btn-katalog-preview flex-grow-1 text-uppercase fw-bold"
+                               target="_blank"
                                rel="noopener">
-                                <i class="fas fa-eye"></i> Preview
+                                <i class="fas fa-eye me-1"></i> Preview
                             </a>
-                            <a href='${whatsappUrl}' 
-                               class='btn-order'
-                               target='_blank'
+                            <a href="${whatsappUrl}" 
+                               class="btn btn-warning flex-grow-1 text-uppercase fw-bold text-dark"
+                               style="border-radius: 0; font-size: 0.75rem; letter-spacing: 0.05em; background-color: var(--accent); border-color: var(--accent);"
+                               target="_blank"
                                rel="noopener">
-                                <i class="fab fa-whatsapp"></i> Order
+                                <i class="fab fa-whatsapp me-1"></i> Order
                             </a>
                         </div>
                     </div>
@@ -443,10 +419,8 @@ class ThemeCatalog {
             return;
         }
         
-        // Cek gambar yang sudah terlihat
         this.checkLazyLoadImages();
         
-        // Setup IntersectionObserver untuk sisanya
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -500,8 +474,7 @@ class ThemeCatalog {
         img.setAttribute('data-loading', 'true');
         
         try {
-            // Preload image
-            await new Promise((resolve, reject) => {
+            await new Promise((resolve) => {
                 const tempImg = new Image();
                 tempImg.onload = () => {
                     requestAnimationFrame(() => {
@@ -536,30 +509,24 @@ class ThemeCatalog {
             return;
         }
         
-        console.log(`🔍 Applying filter: ${filter}`);
-        
         this.currentFilter = filter;
         this.currentIndex = 0;
         this.hasMore = true;
         this.hasInitialLoad = false;
         
-        // Cleanup observers
         if (this.scrollObserver) {
             this.scrollObserver.disconnect();
             this.scrollObserver = null;
         }
         
-        // Reset infinite scroll trigger
         if (this.infiniteScrollTrigger) {
             this.infiniteScrollTrigger.style.display = 'block';
         }
         
-        // Update filter buttons
         this.filterButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.filter === filter);
         });
 
-        // Filter themes
         if (filter === 'all') {
             this.filteredThemes = [...this.themes];
         } else {
@@ -567,10 +534,7 @@ class ThemeCatalog {
                 theme.category === filter || theme.type === filter
             );
         }
-        
-        console.log(`🔍 Filtered to ${this.filteredThemes.length} themes`);
 
-        // Load themes untuk filter baru
         if (this.filteredThemes.length > 0) {
             this.loadInitialThemes();
         } else {
@@ -602,8 +566,6 @@ class ThemeCatalog {
     hideLoading() {
         if (this.loadingIndicator) {
             this.loadingIndicator.classList.remove('show');
-            
-            // Tambahkan delay sebelum benar-benar hide
             setTimeout(() => {
                 if (!this.isLoading && !this.isLoadingMore) {
                     this.loadingIndicator.classList.add('hidden');
@@ -613,48 +575,39 @@ class ThemeCatalog {
     }
 
     showNoResults() {
-        console.log('📭 No results found');
-        
         this.themesContainer.innerHTML = `
             <div class="status-empty">
-                <i class="fas fa-search text-3xl mb-3 block opacity-50"></i>
-                <p class="font-semibold text-lg mb-1">Tidak ada tema yang ditemukan</p>
-                <p class="text-sm opacity-75">Silahkan pilih kategori filter lainnya.</p>
+                <i class="fas fa-search"></i>
+                <p>Tidak ada tema yang ditemukan</p>
+                <span>Silahkan pilih kategori filter lainnya.</span>
             </div>
         `;
-        
         this.hideLoading();
     }
 
     showEndMessage() {
-        console.log(`🏁 Showing end message for ${this.filteredThemes.length} themes`);
-        
         const endMessage = `
             <div class="status-end">
-                <i class="fas fa-check-circle text-xl mb-2 block"></i>
-                <span class="font-medium">Semua ${this.filteredThemes.length} tema telah ditampilkan</span>
+                <i class="fas fa-check-circle"></i>
+                <p>Semua ${this.filteredThemes.length} tema telah ditampilkan</p>
+                <span>Selesai memuat katalog undangan web.</span>
             </div>
         `;
-        
         this.themesContainer.insertAdjacentHTML('beforeend', endMessage);
         this.hideLoading();
     }
 
     showError(message) {
-        console.error('❌ Showing error:', message);
-        
         this.themesContainer.innerHTML = `
             <div class="status-error">
-                <i class="fas fa-exclamation-triangle text-3xl mb-3 block"></i>
-                <p class="font-semibold text-lg mb-1">Terjadi Kesalahan</p>
-                <p class="text-sm mb-4 opacity-75">${message}</p>
-                <button style="background:none;border:1.5px solid currentColor;padding:0.4rem 1.2rem;border-radius:0.5rem;cursor:pointer;font-weight:600;color:inherit;"
-                        onclick="location.reload()">
-                    <i class="fas fa-redo"></i> Muat Ulang
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Terjadi Kesalahan</p>
+                <span>${message}</span>
+                <button class="btn btn-outline-light mt-3" onclick="location.reload()">
+                    <i class="fas fa-redo me-1"></i> Muat Ulang
                 </button>
             </div>
         `;
-        
         this.hideLoading();
     }
 
@@ -662,59 +615,74 @@ class ThemeCatalog {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    // Cleanup
     destroy() {
-        console.log('🧹 Cleaning up ThemeCatalog...');
-        
         if (this.scrollObserver) {
             this.scrollObserver.disconnect();
             this.scrollObserver = null;
         }
-        
         clearTimeout(this.loadMoreTimeout);
     }
 }
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('📄 DOM Content Loaded');
+    // ── Loader Hiding ──
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+            setTimeout(() => loader.style.display = 'none', 700);
+        }, 2500);
+    }
+
+    // ── Cursor Glow ──
+    const cursor = document.getElementById('cursorGlow');
+    if (cursor) {
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    }
+
+    // ── Theme Switcher Widget ──
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const toggleIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
     
+    const getSavedTheme = () => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme ? savedTheme : 'dark';
+    };
+
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (toggleIcon) {
+            toggleIcon.className = theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+        }
+    };
+
+    if (themeToggleBtn) {
+        applyTheme(getSavedTheme());
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+            applyTheme(currentTheme === 'light' ? 'dark' : 'light');
+        });
+    }
+
+    // ── Dynamic Year ──
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // ── Initialize ThemeCatalog ──
     setTimeout(() => {
         try {
-            console.log('🚀 Initializing ThemeCatalog...');
             const catalog = new ThemeCatalog();
             window.themeCatalog = catalog;
-            
-            // Debug helper
-            window.debugCatalog = () => {
-                console.log('🔍 Catalog Debug Info:', {
-                    themes: catalog.themes?.length || 0,
-                    filteredThemes: catalog.filteredThemes?.length || 0,
-                    currentIndex: catalog.currentIndex,
-                    hasMore: catalog.hasMore,
-                    isLoading: catalog.isLoading,
-                    isLoadingMore: catalog.isLoadingMore,
-                    hasInitialLoad: catalog.hasInitialLoad
-                });
-            };
-            
         } catch (error) {
             console.error('❌ Failed to initialize ThemeCatalog:', error);
-            
-            const container = document.getElementById('tema-container');
-            if (container) {
-                container.innerHTML = `
-                    <div class="status-error">
-                        <i class="fas fa-exclamation-triangle text-3xl mb-3 block"></i>
-                        <p class="font-semibold text-lg mb-1">Gagal Memuat Katalog</p>
-                        <p class="text-sm mb-4 opacity-75">${error.message}</p>
-                        <button style="background:none;border:1.5px solid currentColor;padding:0.4rem 1.2rem;border-radius:0.5rem;cursor:pointer;font-weight:600;color:inherit;"
-                                onclick="location.reload()">
-                            <i class="fas fa-redo"></i> Refresh Halaman
-                        </button>
-                    </div>
-                `;
-            }
         }
     }, 100);
 });

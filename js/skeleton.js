@@ -10,23 +10,9 @@ class SkeletonLoader {
 
     createSkeletonCard() {
         return `
-            <div class='skeleton-card-wrapper'>
-                <div class='skeleton-card'>
-                    <div class='skeleton-image'></div>
-                    <div style='padding:1rem;text-align:center;'>
-                        <div class='skeleton-line' style='width:40%;margin:0 auto 8px;'></div>
-                        <div class='skeleton-title'></div>
-                        <div class='skeleton-line' style='width:80%;margin:0 auto 6px;'></div>
-                        <div class='skeleton-line' style='width:60%;margin:0 auto 12px;'></div>
-                        <div style='display:flex;gap:6px;justify-content:center;margin-bottom:12px;'>
-                            <div class='skeleton-badge'></div>
-                            <div class='skeleton-badge'></div>
-                        </div>
-                        <div style='display:flex;gap:8px;'>
-                            <div class='skeleton-button'></div>
-                            <div class='skeleton-button'></div>
-                        </div>
-                    </div>
+            <div class="col-lg-6 col-md-6 mb-4 skeleton-card-wrapper">
+                <div class="skeleton-card">
+                    <div class="skeleton-shimmer"></div>
                 </div>
             </div>
         `;
