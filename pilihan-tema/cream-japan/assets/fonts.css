@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Prestige Signature Script';
+    src: url('prestige-signature-script.eot');
+    src: url('prestige-signature-script.eot?#iefix') format('embedded-opentype'),
+         url('prestige-signature-script.woff2') format('woff2'),
+         url('prestige-signature-script.woff') format('woff'),
+         url('prestige-signature-script.ttf')  format('truetype'),
+         url('prestige-signature-script.svg#Prestige Signature Script') format('svg');
+}

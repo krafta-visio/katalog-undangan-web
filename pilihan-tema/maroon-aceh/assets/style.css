@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "CRONDE";
+  src: url("CRONDERegular.eot");
+  src: url("CRONDERegular.eot?#iefix") format("embedded-opentype"),
+    url("CRONDERegular.woff2") format("woff2"),
+    url("CRONDERegular.woff") format("woff"),
+    url("CRONDERegular.ttf") format("truetype"),
+    url("CRONDERegular.svg#CRONDE") format("svg");
+}

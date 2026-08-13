@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Rosmatika Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Rosmatika Regular"), url("Rosmatika.woff") format("woff");
+}

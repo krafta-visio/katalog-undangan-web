@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Operius Regular';
+    src: url('operius-regular.eot');
+    src: url('operius-regular.eot?#iefix') format('embedded-opentype'),
+         url('operius-regular.woff2') format('woff2'),
+         url('operius-regular.woff') format('woff'),
+         url('operius-regular.ttf')  format('truetype'),
+         url('operius-regular.svg#Operius Regular') format('svg');
+}

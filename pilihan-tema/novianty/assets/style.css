@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Maharlika";
+    src: url("Maharlika-Regular.eot");
+    src: url("Maharlika-Regular.eot?#iefix") format("embedded-opentype"),
+        url("Maharlika-Regular.woff2") format("woff2"),
+        url("Maharlika-Regular.woff") format("woff"),
+        url("Maharlika-Regular.ttf") format("truetype"),
+        url("Maharlika-Regular.svg#Maharlika") format("svg");
+}

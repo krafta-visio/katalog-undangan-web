@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Afterglow';
+    src: url('Afterglow-Regular.eot');
+    src: url('Afterglow-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Afterglow-Regular.woff2') format('woff2'),
+         url('Afterglow-Regular.woff') format('woff'),
+         url('Afterglow-Regular.ttf')  format('truetype'),
+         url('Afterglow-Regular.svg#Afterglow') format('svg');
+}

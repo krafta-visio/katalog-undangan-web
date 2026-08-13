@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Never Let Go";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Never Let Go"), url("NeverLetGo.woff") format("woff");
+}

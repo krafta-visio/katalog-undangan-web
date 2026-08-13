@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Campana Script';
+    src: url('Campana-Script.eot');
+    src: url('Campana-Script.eot?#iefix') format('embedded-opentype'),
+         url('Campana-Script.woff2') format('woff2'),
+         url('Campana-Script.woff') format('woff'),
+         url('Campana-Script.ttf')  format('truetype'),
+         url('Campana-Script.svg#Campana Script') format('svg');
+}

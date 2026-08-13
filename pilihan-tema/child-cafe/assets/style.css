@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Desyanti";
+    src: url("Desyanti.eot");
+    src: url("Desyanti.eot?#iefix") format("embedded-opentype"),
+        url("Desyanti.woff2") format("woff2"),
+        url("Desyanti.woff") format("woff"),
+        url("Desyanti.ttf") format("truetype"),
+        url("Desyanti.svg#Desyanti") format("svg");
+}

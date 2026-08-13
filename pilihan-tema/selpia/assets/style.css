@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Madina';
+    src: url('Madina.eot');
+    src: url('Madina.eot?#iefix') format('embedded-opentype'),
+         url('Madina.woff2') format('woff2'),
+         url('Madina.woff') format('woff'),
+         url('Madina.ttf')  format('truetype'),
+         url('Madina.svg#Madina') format('svg');
+}
