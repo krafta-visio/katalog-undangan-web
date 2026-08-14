@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Love Hewits';
+    src: url('fonts/LoveHewits.eot');
+    src: url('fonts/LoveHewits.eot?#iefix') format('embedded-opentype'),
+         url('fonts/LoveHewits.woff2') format('woff2'),
+         url('fonts/LoveHewits.woff') format('woff'),
+         url('fonts/LoveHewits.ttf')  format('truetype'),
+         url('fonts/LoveHewits.svg#Love Hewits') format('svg');
+}

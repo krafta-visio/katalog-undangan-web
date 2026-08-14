@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BlackSingature';
+    src: url('fonts/BlackSingature.eot');
+    src: url('fonts/BlackSingature.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BlackSingature.woff2') format('woff2'),
+         url('fonts/BlackSingature.woff') format('woff'),
+         url('fonts/BlackSingature.ttf')  format('truetype'),
+         url('fonts/BlackSingature.svg#BlackSingature') format('svg');
+}

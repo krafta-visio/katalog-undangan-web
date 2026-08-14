@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Hanya Teman';
+    src: url('fonts/HanyaTeman.eot');
+    src: url('fonts/HanyaTeman.eot?#iefix') format('embedded-opentype'),
+         url('fonts/HanyaTeman.woff2') format('woff2'),
+         url('fonts/HanyaTeman.woff') format('woff'),
+         url('fonts/HanyaTeman.ttf')  format('truetype'),
+         url('fonts/HanyaTeman.svg#Hanya Teman') format('svg');
+}

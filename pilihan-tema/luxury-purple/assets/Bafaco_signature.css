@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Bafaco_signature';
+    src: url('fonts/Bafacosignature.eot');
+    src: url('fonts/Bafacosignature.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Bafacosignature.woff2') format('woff2'),
+         url('fonts/Bafacosignature.woff') format('woff'),
+         url('fonts/Bafacosignature.ttf')  format('truetype'),
+         url('fonts/Bafacosignature.svg#Bafaco_signature') format('svg');
+}
